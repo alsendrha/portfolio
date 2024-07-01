@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.transform {
+  transform-style: preserve-3d;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  src: url("/fonts/Pretendard-Regular.ttf") format("truetype");
+}
