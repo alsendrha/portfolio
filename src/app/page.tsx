@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Main from "./main/page";
+import Project from "./project/page";
 
 export default function Home() {
   return (
     <>
-      <Main />
+      <Project />
     </>
   );
 }
