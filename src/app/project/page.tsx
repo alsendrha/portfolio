@@ -120,8 +120,8 @@ const Project = () => {
                   <p className="font-bold text-nowrap">
                     사용 기술&nbsp;:&nbsp;
                   </p>
-                  {/* <p>{data.tech}</p> */}
-                  {data.techImg.map((img, index) => (
+                  <p>{data.tech}</p>
+                  {/* {data.techImg.map((img, index) => (
                     <div key={index} className="w-full flex items-center">
                       <div className="w-full max-w-[90px] h-[40px] relative">
                         <Image
@@ -134,7 +134,7 @@ const Project = () => {
                       </div>
                       <div>&nbsp;</div>
                     </div>
-                  ))}
+                  ))} */}
                 </div>
                 <div className="flex mt-3">
                   <p className="text-nowrap font-bold">

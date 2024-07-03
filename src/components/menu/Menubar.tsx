@@ -26,8 +26,8 @@ const Menubar = () => {
         <div className="mt-10 text-[20px]">
           {menu.map((item, index) => (
             <Link key={index} href={item.link} className="">
-              <div className="flex items-center p-2 mt-2 rounded-[10px] hover:bg-gray-100">
-                <div>{item.icon}</div>
+              <div className="flex items-center p-2 mt-2 rounded-[10px] group hover:bg-gray-100">
+                <div className="group-hover:scale-110">{item.icon}</div>
                 <p
                   className={`ml-3  ${
                     pathName === item.link ? "font-bold" : "font-light"
