@@ -6,10 +6,15 @@ import { SlOptions } from "react-icons/sl";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { projectData } from "@/data/ProjectData";
+import { BiMessageRounded } from "react-icons/bi";
+import ReplyInsert from "@/components/project/ReplyInsert";
+import ReplyList from "@/components/project/ReplyList";
 
 const Project = () => {
   const [imageIndices, setImageIndices] = useState(projectData.map(() => 0));
-
+  const [isOpen, setIsOpen] = useState(false);
+  const [isClick, setIsClick] = useState(false);
+  const [currentProjectId, setCurrentProjectId] = useState(0);
   const next = (projectId: number) => {
     setImageIndices((prevIndices) =>
       prevIndices.map((imgIndex, index) =>
@@ -30,7 +35,7 @@ const Project = () => {
       )
     );
   };
-
+  console.log(isOpen);
   return (
     <div className="w-full border-gray-300">
       <div className="border w-full h-[100px]">
@@ -95,9 +100,15 @@ const Project = () => {
                   alt="프로젝트 이미지"
                 />
               </div>
-              {/* <div className="mt-5">
-                <p>d</p>
-              </div> */}
+              <div className="mt-5 ">
+                <BiMessageRounded
+                  className="text-[32px]"
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                    setCurrentProjectId(data.id);
+                  }}
+                />
+              </div>
               <div>
                 <div className="flex items-center mt-3">
                   <p className="font-bold text-nowrap">
@@ -132,7 +143,11 @@ const Project = () => {
                   <p>{data.myJob}</p>
                 </div>
               </div>
+              {isOpen && currentProjectId === data.id && (
+                <ReplyInsert id={data.id} setIsOpen={setIsOpen} />
+              )}
             </div>
+            <ReplyList id={data.id} />
           </div>
         ))}
       </div>
