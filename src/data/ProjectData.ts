@@ -77,12 +77,13 @@ export const skillData = [
   {
     name: "Html,Css,Js",
     img: "/images/logo/html.png",
-    content: "내용\n내용\n내용\n내용",
+    content:
+      "- 원하는 UI를 실용적이고, 익숙하게 만들어 낼수 있습니다.\n- Css의 기본적인 문법을 사용할수 있습니다.\n다양한 속성과 메소드 사용이 가능합니다.\n- 비동기 통신으로 데이터를 요청을 할 수 있습니다.",
   },
   {
     name: "React",
     img: "/images/logo/react.png",
-    content: "내용\n내용\n내용\n내용",
+    content: "- 컴포넌트 생명주기와 속성을 사용할 수 있습니다.\n",
   },
   {
     name: "NextJs",

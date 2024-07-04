@@ -13,7 +13,7 @@ const Skills = () => {
         {skillData.map((item, index) => (
           <div
             key={index}
-            className="w-[280px] h-[200px] border m-3 rounded-xl overflow-hidden relative
+            className="w-[280px] h-[300px] border m-3 rounded-xl overflow-hidden relative
             hover:before:absolute hover:before:top-[-50%] hover:before:bottom-[-50%] hover:before:left-[-50%] hover:before:right-[-50%] hover:before:bg-gradient-conic hover:before:from-transparent hover:before:to-black before:animate-spin-slow"
           >
             <div className="absolute top-1 left-1 right-1 bottom-1 p-3 rounded-lg bg-white">
@@ -27,7 +27,7 @@ const Skills = () => {
                     alt="스킬 이미지"
                   />
                 </div>
-                <p className="ml-3 text-xl">{item.name}</p>
+                <p className="ml-5 text-xl">{item.name}</p>
               </div>
               <div className="mt-4">
                 <p className="whitespace-pre-wrap">{item.content}</p>
