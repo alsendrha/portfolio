@@ -83,7 +83,8 @@ export const skillData = [
   {
     name: "React",
     img: "/images/logo/react.png",
-    content: "- 컴포넌트 생명주기와 속성을 사용할 수 있습니다.\n",
+    content:
+      "- 컴포넌트 생명주기와 속성을 사용할 수 있습니다.\n- 라우터 설정을 하여 자유롭게 페이지 이동이 가능합니다.\n- props와 context를 활용하여 데이터 전달이 가능합니다.\n- provider 라이브러리 사용이 가능합니다.",
   },
   {
     name: "NextJs",
@@ -93,17 +94,18 @@ export const skillData = [
   {
     name: "Typescript",
     img: "/images/logo/typescript.png",
-    content: "내용\n내용\n내용\n내용",
+    content: "- 타입을 지정하여 개발 환경을 쾌적하게 만들수있습니다.",
   },
   {
     name: "Axios",
     img: "/images/logo/axios.png",
-    content: "내용\n내용\n내용\n내용",
+    content:
+      "- axios를 통해서 비동기 통신이 가능합니다.\n- interceptor 사용이 가능합니다.",
   },
   {
     name: "React-query",
     img: "/images/logo/react-query.png",
-    content: "내용\n내용\n내용\n내용",
+    content: "-비동기 통신을 통해 데이터 관리가 가능합니다.\n- \n내용\n내용",
   },
   {
     name: "Styled-components",

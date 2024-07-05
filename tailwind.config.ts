@@ -16,6 +16,7 @@ const config: Config = {
       animation: {
         "spin-slow": "spin 3s linear infinite",
       },
+      keyframes: {},
     },
   },
   plugins: [require("@xpd/tailwind-3dtransforms")],
