@@ -9,6 +9,7 @@ import { projectData } from "@/data/ProjectData";
 import { BiMessageRounded } from "react-icons/bi";
 import ReplyInsert from "@/components/project/ReplyInsert";
 import ReplyList from "@/components/project/ReplyList";
+import Link from "next/link";
 
 const Project = () => {
   const [imageIndices, setImageIndices] = useState(projectData.map(() => 0));
@@ -141,6 +142,14 @@ const Project = () => {
                     업&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;무&nbsp;:&nbsp;
                   </p>
                   <p>{data.myJob}</p>
+                </div>
+                <div className="flex mt-3">
+                  <p className="text-nowrap font-bold">
+                    링&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;크&nbsp;:&nbsp;
+                  </p>
+                  <p className="text-blue-500">
+                    <Link href={data.link}>{data.title}</Link>
+                  </p>
                 </div>
               </div>
               {isOpen && currentProjectId === data.id && (

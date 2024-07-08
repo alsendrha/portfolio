@@ -21,7 +21,9 @@ const Menubar = () => {
     <div className="w-[290px] p-1 h-fit sticky top-0">
       <div className="mt-10 px-5">
         <div className="px-2">
-          <p className="font-bold text-[24px]">PORTFOLIO</p>
+          <Link href={"/"}>
+            <p className="font-bold text-[24px]">PORTFOLIO</p>
+          </Link>
         </div>
         <div className="mt-10 text-[20px]">
           {menu.map((item, index) => (

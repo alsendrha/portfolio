@@ -12,7 +12,7 @@ const Sidebar = () => {
     <div
       className={`${
         param === "/" || param === "/about"
-          ? "w-full h-screen flex justify-center"
+          ? "w-full h-screen flex"
           : param === "/skills"
           ? "w-[300px]"
           : "w-[750px]"
@@ -48,7 +48,11 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-      <div className="ml-24 mt-10">
+      <div
+        className={`ml-24 mt-10 ${
+          param === "/" || param === "/about" ? "block" : "hidden"
+        }`}
+      >
         <div className="font-bold text-2xl">HI! HOW ARE YOU?</div>
         <h1 className="relative">
           I'M

@@ -1,7 +1,11 @@
 export const projectData = [
   {
     id: 0,
-    img: ["/images/background.jpg", "/images/background2.jpg"],
+    img: [
+      "/images/project/project01-image01.png",
+      "/images/project/project01-image02.png",
+      "/images/project/project01-image03.png",
+    ],
     title: "우리동네 경매장",
     content: "명품 경매 서비스",
     date: "2024-05-01 ~ 2024-05-31",
@@ -17,6 +21,7 @@ export const projectData = [
       "Zustand, ",
       "Firebase",
     ],
+    link: "https://drive.google.com/drive/my-drive",
     techImg: [
       "/images/logo/nextjs.png",
       "/images/logo/typescript.png",
@@ -29,7 +34,11 @@ export const projectData = [
   },
   {
     id: 1,
-    img: ["/images/background2.jpg", "/images/background.jpg"],
+    img: [
+      "/images/project/3eng-01.gif",
+      "/images/project/3eng-02.png",
+      "/images/project/3eng-03.png",
+    ],
     title: "3-ENG",
     content: "매일 AI 5문제 영어",
     date: "2024-04-01 ~ 2024-04-30",
@@ -43,6 +52,7 @@ export const projectData = [
       "Vanilla-extract/css, ",
       "Zustand",
     ],
+    link: "https://drive.google.com/file/d/1iB3WScb1EYIq1zvhURsamtRVxevvaB8e/view",
     techImg: [
       "/images/logo/react_vite.png",
       "/images/logo/typescript.png",
@@ -54,9 +64,9 @@ export const projectData = [
   {
     id: 2,
     img: [
-      "/images/background2.jpg",
-      "/images/background.jpg",
-      "/images/background3.jpg",
+      "/images/project/min-01.png",
+      "/images/project/min-02.png",
+      "/images/project/min-03.png",
     ],
     title: "배추마켓",
     content: "당근마켓 클론",
@@ -64,6 +74,7 @@ export const projectData = [
     people: "frontend 1명",
     myJob: "전체 페이지 개발, 배포, 도매인 주소 변경 (전체 기여도 100%)",
     tech: ["React, ", "Google-map-api, ", "Kakao-web-api, ", "Firebase"],
+    link: "https://alsendrha.shop/",
     techImg: [
       "/images/logo/react.png",
       "/images/logo/google_map.png",
@@ -89,7 +100,8 @@ export const skillData = [
   {
     name: "NextJs",
     img: "/images/logo/nextjs.png",
-    content: "내용\n내용\n내용\n내용",
+    content:
+      "- Next 14 SSR과 CSR을 구분지어서 사용 가능합니다.\n- 폴더 방식의 routing을 이해하고 사용 가능합니다.\n- loading, not-found등 기본적인 페이지 사용이 가능합니다.",
   },
   {
     name: "Typescript",
@@ -105,26 +117,31 @@ export const skillData = [
   {
     name: "React-query",
     img: "/images/logo/react-query.png",
-    content: "-비동기 통신을 통해 데이터 관리가 가능합니다.\n- \n내용\n내용",
+    content:
+      "- useQuery와 useMutation을 사용하여 데이터를 요청할수 있습니다.\n- 기본적인 기능들을 사용할수 있습니다.",
   },
   {
     name: "Styled-components",
     img: "/images/logo/styled_components.png",
-    content: "내용\n내용\n내용\n내용",
+    content:
+      "- 태그를 이용한 css작성이 가능합니다.\n- props를 활용하여 css 변경이 가능합니다.",
   },
   {
     name: "Tailwindcss",
     img: "/images/logo/tailwindcss.png",
-    content: "내용\n내용\n내용\n내용",
+    content:
+      "- 기본적인 css작성이 가능합니다.\n- 옵션을 통해 애니메이션등의 기능을 사용할수 있습니다.",
   },
   {
     name: "Vanilla-extract/css",
     img: "/images/logo/vanilla-extract.png",
-    content: "내용\n내용\n내용\n내용",
+    content:
+      "- 기본적인 css작성이 가능합니다.\n- props를 활용하여 css 변경이 가능힙니다.",
   },
   {
     name: "Zustand",
     img: "/images/logo/Zustand.png",
-    content: "내용\n내용\n내용\n내용",
+    content:
+      "- 기본적인 데이터 이동이 가능합니다.\n- 데이터 저장 옵션 기능 사용이 가능합니다.",
   },
 ];
