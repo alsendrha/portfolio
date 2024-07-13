@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const Sidebar = () => {
   const param = usePathname();
@@ -13,7 +14,7 @@ const Sidebar = () => {
     <div
       className={`${
         param === "/" || param === "/about"
-          ? "w-full h-screen flex"
+          ? "w-full h-screen flex items-center"
           : param === "/skills"
           ? "w-[300px]"
           : "w-[750px]"
@@ -44,7 +45,7 @@ const Sidebar = () => {
               param === "/" || param === "/about" ? "hidden" : "block"
             } ml-4 text-[20px]`}
           >
-            <p className="font-bold">Frontend</p>
+            <p className="font-bold text-[#21277b]">FRONTEND</p>
             <p>김민영</p>
           </div>
         </div>
@@ -54,14 +55,34 @@ const Sidebar = () => {
           param === "/" || param === "/about" ? "block" : "hidden"
         }`}
       >
-        <div className="font-bold text-2xl">HI! HOW ARE YOU?</div>
-        <h1 className="relative text-[40px]">
+        <div className="font-bold text-2xl text-[#5f83b1]">
+          HI! HOW ARE YOU?
+        </div>
+        <div>
+          <span className="font-bold text-[40px] text-red-600">I'M </span>
+          <TypeAnimation
+            sequence={[
+              "MIN YOUNG",
+              2000,
+              "WEB DEVELOPER",
+              2000,
+              "FRONTEND DEVELOPER",
+              2000,
+            ]}
+            wrapper="span"
+            preRenderFirstString={false}
+            speed={70}
+            className="relative text-[40px] font-bold text-[#21277b]"
+            repeat={Infinity}
+          />
+        </div>
+        {/* <h1 className="relative text-[40px]">
           I'M&nbsp;
           <span className="">
             <strong>MIN YOUNG</strong>
             <strong>WEB DEVELOPER</strong>
           </span>
-        </h1>
+        </h1> */}
         <div className="mt-3 font-bold">
           <p>안녕하세요, 저는 김민영입니다.</p>
           <p>
@@ -75,23 +96,35 @@ const Sidebar = () => {
           <p>경험할 수 있는 회사에서 일하고 싶습니다.</p>
         </div>
         <div className="mt-20">
-          <div className="font-bold text-2xl mb-3">
-            <p>PERSONAL INFOS</p>
+          <div className="font-bold text-2xl mb-5">
+            <p className="text-[#5f83b1]">PERSONAL INFOS</p>
           </div>
-          <div className="flex">
+          <div className="flex font-semibold">
             <div className="mr-32">
-              <p className="mb-3">Name: 김민영</p>
-              <p className="mb-3">Phone: 010.9898.7069</p>
-              <p className="mb-3">Email: alsendrha@naver.com</p>
+              <p className="mb-3">
+                <span className="text-[#21277b]">Name</span> : 김민영
+              </p>
+              <p className="mb-3">
+                <span className="text-[#21277b]">Phone</span> : 010.9898.7069
+              </p>
+              <p className="mb-3">
+                <span className="text-[#21277b]">Email</span> :
+                alsendrha@naver.com
+              </p>
             </div>
             <div>
-              <p className="mb-3">Age: 39, 1986.08</p>
-              <p className="mb-3">Address: 서울시 서대문구</p>
+              <p className="mb-3">
+                <span className="text-[#21277b]">Age</span> : 39, 1986.08
+              </p>
+              <p className="mb-3">
+                <span className="text-[#21277b]">Address</span> : 서울시
+                서대문구
+              </p>
             </div>
           </div>
         </div>
         <Link href={"/skills"}>
-          <div className="mt-10 font-bold border py-5 px-5 w-fit flex justify-center rounded-full bg-black text-white hover:border hover:bg-white hover:text-black">
+          <div className="mt-20 font-bold border py-5 px-5 w-fit flex justify-center rounded-full bg-[#21277b] text-white hover:border-[#21277b] hover:bg-white hover:text-[#21277b]">
             MORE ABOUT ME
           </div>
         </Link>

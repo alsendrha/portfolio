@@ -17,3 +17,7 @@
   font-weight: 400;
   src: url("/fonts/Pretendard-Regular.ttf") format("truetype");
 }
+
+body {
+  background: radial-gradient(circle, #fff, #f0f0f0);
+}

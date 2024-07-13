@@ -46,7 +46,7 @@ const Project = () => {
         {projectData.map((data) => (
           <div
             key={data.id}
-            className="w-full my-5 relative border-b pb-10 last:border-b-0"
+            className="w-full my-5 relative border-b rounded-lg pb-10 last:border-b-0 bg-white p-4"
           >
             <div
               className="flex justify-between items-center
@@ -74,8 +74,8 @@ const Project = () => {
                       key={index}
                       className={`w-3 h-3 rounded-full ml-2 bottom-3 left-[50%] transform -translate-x-1/2 bg-opacity-75 ${
                         imageIndices[data.id] === index
-                          ? "bg-gray-200"
-                          : "bg-gray-500"
+                          ? "bg-[#21277b]"
+                          : "bg-[#5f83b1] bg-opacity-20"
                       } `}
                     />
                   ))}
@@ -97,7 +97,7 @@ const Project = () => {
                   src={data.img[imageIndices[data.id]]}
                   fill
                   sizes="1"
-                  className="object-cover -z-10"
+                  className="object-cover "
                   alt="프로젝트 이미지"
                 />
               </div>

@@ -22,13 +22,13 @@ const Menubar = () => {
       <div className="mt-10 px-5">
         <div className="px-2">
           <Link href={"/"}>
-            <p className="font-bold text-[24px]">PORTFOLIO</p>
+            <p className="font-bold text-3xl text-[#21277b]">PORTFOLIO</p>
           </Link>
         </div>
         <div className="mt-10 text-[20px]">
           {menu.map((item, index) => (
             <Link key={index} href={item.link} className="">
-              <div className="flex items-center p-2 mt-2 rounded-[10px] group hover:bg-gray-100">
+              <div className="flex items-center p-2 mt-2 text-[#5f83b1] rounded-[10px] group hover:bg-[#9ad9ea] hover:bg-opacity-20">
                 <div className="group-hover:scale-110">{item.icon}</div>
                 <p
                   className={`ml-3  ${
