@@ -11,6 +11,7 @@
   "dependencies": {
     "@types/uuid": "^10.0.0",
     "@xpd/tailwind-3dtransforms": "^1.0.3",
+    "axios": "^1.7.2",
     "firebase": "^10.12.2",
     "framer-motion": "^11.2.12",
     "next": "14.2.4",
