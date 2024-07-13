@@ -39,10 +39,22 @@ const Project = () => {
   console.log(isOpen);
   return (
     <div className="w-full border-gray-300">
-      <div className="border w-full h-[100px]">
-        <p>ddd</p>
+      <div className="w-full h-[100px] flex items-center px-10 my-5">
+        {projectData.map((data) => (
+          <Link href={data.link} key={data.id}>
+            <div className="w-[80px] h-[80px] mr-5 rounded-full border relative overflow-hidden">
+              <Image
+                src={data.img[0]}
+                fill
+                sizes="1"
+                className="object-cover"
+                alt="탑 이미지"
+              />
+            </div>
+          </Link>
+        ))}
       </div>
-      <div className="px-10 my-10">
+      <div className="px-10 my-5">
         {projectData.map((data) => (
           <div
             key={data.id}

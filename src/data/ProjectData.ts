@@ -21,7 +21,7 @@ export const projectData = [
       "Zustand, ",
       "Firebase",
     ],
-    link: "https://drive.google.com/drive/my-drive",
+    link: "https://drive.google.com/file/d/1azeC7Qnhg94tMq4DeLzpTDfV1dkNwF1u/view?usp=drive_link",
     techImg: [
       "/images/logo/nextjs.png",
       "/images/logo/typescript.png",
