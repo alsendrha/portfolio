@@ -37,10 +37,9 @@ const Project = () => {
       )
     );
   };
-  console.log(isOpen);
   return (
     <div className="w-full border-gray-300">
-      <div className="w-full h-[100px] flex items-center px-10 my-5">
+      <div className="w-full max-[1500px]:w-[800px] max-[1060px]:w-[600px] max-[860px]:w-[450px] max-[1500px]:mx-auto h-[100px] flex items-center px-10 max-[1500px]:px-0 my-5">
         {projectData.map((data) => (
           <Link href={data.link} key={data.id}>
             <div className="w-[80px] h-[80px] mr-5 rounded-full border relative overflow-hidden">
@@ -55,11 +54,11 @@ const Project = () => {
           </Link>
         ))}
       </div>
-      <div className="px-10 my-5">
+      <div className="px-10  max-[780px]:px-0 my-5">
         {projectData.map((data) => (
           <div
             key={data.id}
-            className="w-full my-5 relative border-b rounded-lg pb-10 last:border-b-0 bg-white p-4"
+            className="w-full max-[1500px]:w-[800px] max-[1060px]:w-[600px] max-[860px]:w-[450px] max-[1500px]:mx-auto my-5 relative border-b rounded-lg pb-10 max-[1060px]:pb-0 last:border-b-0 bg-white p-4"
           >
             <div
               className="flex justify-between items-center
@@ -80,7 +79,7 @@ const Project = () => {
               </div>
             </div>
             <div className="mt-3">
-              <div className="w-full h-[500px] relative">
+              <div className="w-full h-[500px] max-[1060px]:h-[400px] max-[860px]:h-[300px] relative">
                 <div className="flex z-10 absolute bottom-3 left-1/2 transform -translate-x-1/2">
                   {data.img.map((img, index) => (
                     <div
@@ -110,7 +109,7 @@ const Project = () => {
                   src={data.img[imageIndices[data.id]]}
                   fill
                   sizes="1"
-                  className="object-cover "
+                  className="object-cover max-[1060px]:object-contain"
                   alt="프로젝트 이미지"
                 />
               </div>

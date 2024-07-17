@@ -8,12 +8,20 @@ const Sidebar = () => {
   const param = usePathname();
   console.log(param);
   return (
-    <div className="pb-10">
+    <div
+      className={`pb-10 ${
+        param === "/" || param === "/about"
+          ? "block"
+          : param === "/project"
+          ? "max-[1500px]:hidden"
+          : "max-[860px]:hidden"
+      }`}
+    >
       <Section01 param={param} />
       <Section02 param={param} />
       <Link
         href={"/skills"}
-        className={`ml-10 w-full flex justify-center ${
+        className={`ml-20 max-[1060px]:ml-10 flex justify-center ${
           param === "/" || param === "/about" ? "block" : "hidden"
         }`}
       >
