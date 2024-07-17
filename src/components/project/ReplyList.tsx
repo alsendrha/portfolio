@@ -2,14 +2,23 @@
 
 import { db } from "@/firebase";
 import { useOnclickOutside } from "@/hooks/useOnClickOutSide";
-import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
+import {
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+  orderBy,
+  query,
+  where,
+} from "firebase/firestore";
 import React, { MouseEvent, useEffect, useRef, useState } from "react";
 import { SlOptions } from "react-icons/sl";
 type ReplyProps = {
   id: number;
+  count: number;
 };
 
-const ReplyList = ({ id }: ReplyProps) => {
+const ReplyList = ({ id, count }: ReplyProps) => {
   const [replyList, setReplyList] = useState<any[]>([]);
   const [isClick, setIsClick] = useState(false);
   const ref = useRef(null);
@@ -24,14 +33,26 @@ const ReplyList = ({ id }: ReplyProps) => {
       console.error("Error fetching replies:", error);
     }
   };
+  console.log(replyList);
+  const replyDelete = async (id: string, password: string) => {
+    const auth = prompt("비밀번호를 입력해주세요");
 
-  const replyDelete = async (id: number) => {
-    console.log(id);
+    if (auth === password) {
+      const deleteConfirm = confirm("정말 삭제하시겠습니까?");
+      if (!deleteConfirm) return;
+      try {
+        await deleteDoc(doc(db, "reply", id));
+      } catch (error) {
+        console.log("댓글 삭제 실패", error);
+      }
+    } else {
+      return;
+    }
   };
 
   useEffect(() => {
     getData();
-  }, [replyList]);
+  }, [count]);
 
   useOnclickOutside(ref, () => {
     setIsClick(false);
@@ -56,8 +77,8 @@ const ReplyList = ({ id }: ReplyProps) => {
                 onClick={() => setIsClick(false)}
               >
                 <li
-                  className="w-full border text-center"
-                  onClick={() => replyDelete(reply.id)}
+                  className="w-full border text-center cursor-pointer rounded-lg bg-[#21277b] text-white hover:bg-white hover:text-[#21277b] hover:border-[#21277b]"
+                  onClick={() => replyDelete(reply.id, reply.password)}
                 >
                   삭제
                 </li>

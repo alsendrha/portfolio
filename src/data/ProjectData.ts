@@ -22,6 +22,7 @@ export const projectData = [
       "Firebase",
     ],
     link: "https://drive.google.com/file/d/1azeC7Qnhg94tMq4DeLzpTDfV1dkNwF1u/view?usp=drive_link",
+    link2: "https://superlative-boba-26e889.netlify.app/",
     techImg: [
       "/images/logo/nextjs.png",
       "/images/logo/typescript.png",
@@ -53,6 +54,7 @@ export const projectData = [
       "Zustand",
     ],
     link: "https://drive.google.com/file/d/1iB3WScb1EYIq1zvhURsamtRVxevvaB8e/view",
+    link2: "https://3eng.site/",
     techImg: [
       "/images/logo/react_vite.png",
       "/images/logo/typescript.png",
@@ -75,6 +77,7 @@ export const projectData = [
     myJob: "전체 페이지 개발, 배포, 도매인 주소 변경 (전체 기여도 100%)",
     tech: ["React, ", "Google-map-api, ", "Kakao-web-api, ", "Firebase"],
     link: "https://alsendrha.shop/",
+    link2: "https://alsendrha.shop/",
     techImg: [
       "/images/logo/react.png",
       "/images/logo/google_map.png",

@@ -15,6 +15,7 @@ const Project = () => {
   const [imageIndices, setImageIndices] = useState(projectData.map(() => 0));
   const [isOpen, setIsOpen] = useState(false);
   const [isClick, setIsClick] = useState(false);
+  const [count, setCount] = useState(0);
   const [currentProjectId, setCurrentProjectId] = useState(0);
   const next = (projectId: number) => {
     setImageIndices((prevIndices) =>
@@ -163,12 +164,30 @@ const Project = () => {
                     <Link href={data.link}>{data.title}</Link>
                   </p>
                 </div>
+                <div className="flex mt-3">
+                  <p className="text-nowrap font-bold">
+                    링&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;크2&nbsp;:&nbsp;
+                  </p>
+                  <p className="text-blue-500">
+                    <Link href={data.link2} target="_blank">
+                      {data.title}&nbsp;
+                      {data.title === "우리동네 경매장" ||
+                      data.title === "3-ENG"
+                        ? "(백엔드 서버 내림)"
+                        : ""}
+                    </Link>
+                  </p>
+                </div>
               </div>
               {isOpen && currentProjectId === data.id && (
-                <ReplyInsert id={data.id} setIsOpen={setIsOpen} />
+                <ReplyInsert
+                  id={data.id}
+                  setIsOpen={setIsOpen}
+                  setCount={setCount}
+                />
               )}
             </div>
-            <ReplyList id={data.id} />
+            <ReplyList id={data.id} count={count} />
           </div>
         ))}
       </div>

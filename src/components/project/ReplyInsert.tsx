@@ -6,9 +6,10 @@ import { v4 as uuid } from "uuid";
 type ReplyProps = {
   id: number;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setCount: React.Dispatch<React.SetStateAction<number>>;
 };
 
-const ReplyInsert = ({ id, setIsOpen }: ReplyProps) => {
+const ReplyInsert = ({ id, setIsOpen, setCount }: ReplyProps) => {
   const [userReply, setUserReply] = useState({
     nickName: "",
     password: "",
@@ -44,6 +45,7 @@ const ReplyInsert = ({ id, setIsOpen }: ReplyProps) => {
       });
       setUserReply({ nickName: "", password: "", content: "" });
       setIsOpen(false);
+      setCount((prev) => prev + 1);
     } catch (error) {
       console.log("댓글 등록 실패", error);
     }
