@@ -79,7 +79,7 @@ const Section01 = ({ param }: Section01Props) => {
           </div>
           <div>
             <span className="font-bold text-[40px] text-red-600 max-[1135px]:text-[30px] max-[680px]:text-[24px] max-[600px]:text-[20px]">
-              I'M
+              I&apos;M&nbsp;
             </span>
             <TypeAnimation
               sequence={[
@@ -115,7 +115,6 @@ const Section01 = ({ param }: Section01Props) => {
             </p>
             <p>현재 프론트엔드 개발자로 구직중입니다.</p>
             <p>
-              {" "}
               맡은 일에 자부심을 갖고 도전을 경험할 수 있는 회사에서 일하고
               싶습니다.
             </p>
