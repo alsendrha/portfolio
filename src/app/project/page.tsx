@@ -39,7 +39,7 @@ const Project = () => {
   };
   return (
     <div className="w-full border-gray-300">
-      <div className="w-full max-[1500px]:w-[800px] max-[1060px]:w-[600px] max-[860px]:w-[450px] max-[1500px]:mx-auto h-[100px] flex items-center px-10 max-[1500px]:px-0 my-5">
+      <div className="w-full max-[1500px]:w-[800px] max-[1060px]:w-[600px] max-[860px]:w-[450px] max-[580px]:w-[400px] max-[1500px]:mx-auto h-[100px] flex items-center px-10 max-[1500px]:px-0 my-5">
         {projectData.map((data) => (
           <Link href={data.link} key={data.id}>
             <div className="w-[80px] h-[80px] mr-5 rounded-full border relative overflow-hidden">
@@ -58,7 +58,7 @@ const Project = () => {
         {projectData.map((data) => (
           <div
             key={data.id}
-            className="w-full max-[1500px]:w-[800px] max-[1060px]:w-[600px] max-[860px]:w-[450px] max-[1500px]:mx-auto my-5 relative border-b rounded-lg pb-10 max-[1060px]:pb-0 last:border-b-0 bg-white p-4"
+            className="w-full max-[1500px]:w-[800px] max-[1060px]:w-[600px] max-[860px]:w-[450px] max-[580px]:w-[400px] max-[1500px]:mx-auto my-5 relative border-b rounded-lg pb-10 max-[1060px]:pb-0 last:border-b-0 bg-white p-4"
           >
             <div
               className="flex justify-between items-center
@@ -68,7 +68,9 @@ const Project = () => {
                 <div className="w-[50px] h-[50px] rounded-full bg-[gray]" />
                 <div className="ml-3">
                   <div className="flex items-center">
-                    <p className="font-bold">{data.title}&nbsp;·&nbsp;</p>
+                    <p className="font-bold  max-[580px]:text-[12px]">
+                      {data.title}&nbsp;·&nbsp;
+                    </p>
                     <p className="">{data.date}</p>
                   </div>
                   <p className="text-sm">{data.content}</p>
@@ -79,7 +81,7 @@ const Project = () => {
               </div>
             </div>
             <div className="mt-3">
-              <div className="w-full h-[500px] max-[1060px]:h-[400px] max-[860px]:h-[300px] relative">
+              <div className="w-full h-[500px] max-[1060px]:h-[400px] max-[860px]:h-[300px] max-[580px]:h-[250px] relative">
                 <div className="flex z-10 absolute bottom-3 left-1/2 transform -translate-x-1/2">
                   {data.img.map((img, index) => (
                     <div

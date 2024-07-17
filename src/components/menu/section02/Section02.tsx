@@ -21,7 +21,7 @@ const Section02 = ({ param }: Section02Props) => {
           </p>
         </div>
       </div>
-      <div className="mt-10 text-center">
+      <div className="mt-10 text-center max-[600px]:mt-0">
         <div className="flex relative items-center justify-center">
           <div className="absolute w-[5px] h-full bg-black max-[925px]:bg-gray-300"></div>
           <div>

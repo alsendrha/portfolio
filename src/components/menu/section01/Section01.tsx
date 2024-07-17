@@ -27,7 +27,7 @@ const Section01 = ({ param }: Section01Props) => {
       <div
         className={`${
           param === "/" || param === "/about"
-            ? "flex max-[1060px]:block mt-10 ml-20 max-[1060px]:ml-3 relative"
+            ? "flex max-[1060px]:block mt-10 max-[600px]:mt-0 ml-20 max-[1060px]:ml-3 relative"
             : param === "/skills"
             ? "w-[300px]"
             : "w-[450px]"
@@ -46,15 +46,16 @@ const Section01 = ({ param }: Section01Props) => {
             <div
               className={`${
                 param === "/" || param === "/about"
-                  ? "w-[250px] h-[250px] shadow-lg rounded-lg max-[1060px]:ml-11 max-[1060px]:mb-10 "
+                  ? "w-[250px] h-[300px] shadow-lg rounded-lg max-[1060px]:ml-11 max-[1060px]:mb-10 "
                   : "w-[80px] h-[80px] rounded-full border"
               }    relative overflow-hidden transition-all duration-[0.3s] ease-out`}
             >
               <Image
-                src={"/images/images.png"}
+                src={"/images/my_photo.jpg"}
                 fill
                 sizes="1"
                 alt="프로필 이미지"
+                className="object-cover"
               />
             </div>
 
