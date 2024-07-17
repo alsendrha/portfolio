@@ -79,7 +79,7 @@ const Section01 = ({ param }: Section01Props) => {
           </div>
           <div>
             <span className="font-bold text-[40px] text-red-600 max-[1135px]:text-[30px] max-[680px]:text-[24px] max-[600px]:text-[20px]">
-              I'M{" "}
+              I'M
             </span>
             <TypeAnimation
               sequence={[
