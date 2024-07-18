@@ -143,7 +143,7 @@ export const skillData = [
   },
   {
     name: "Zustand",
-    img: "/images/logo/Zustand.png",
+    img: "/images/logo/zustand.png",
     content:
       "- 기본적인 데이터 이동이 가능합니다.\n- 데이터 저장 옵션 기능 사용이 가능합니다.",
   },
