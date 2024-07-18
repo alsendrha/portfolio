@@ -16,9 +16,10 @@ import { SlOptions } from "react-icons/sl";
 type ReplyProps = {
   id: number;
   count: number;
+  setCount: React.Dispatch<React.SetStateAction<number>>;
 };
 
-const ReplyList = ({ id, count }: ReplyProps) => {
+const ReplyList = ({ id, count, setCount }: ReplyProps) => {
   const [replyList, setReplyList] = useState<any[]>([]);
   const [isClick, setIsClick] = useState(false);
   const ref = useRef(null);
@@ -42,11 +43,12 @@ const ReplyList = ({ id, count }: ReplyProps) => {
       if (!deleteConfirm) return;
       try {
         await deleteDoc(doc(db, "reply", id));
+        setCount((prev) => prev + 1);
       } catch (error) {
         console.log("댓글 삭제 실패", error);
       }
     } else {
-      return;
+      return alert("비밀번호가 일치하지 않습니다.");;
     }
   };
 

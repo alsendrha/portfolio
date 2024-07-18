@@ -32,7 +32,7 @@ const Project = () => {
       prevIndices.map((imgIndex, index) =>
         index === projectId
           ? (imgIndex - 1 + projectData[projectId].img.length) %
-            projectData[projectId].img.length
+          projectData[projectId].img.length
           : imgIndex
       )
     );
@@ -58,7 +58,7 @@ const Project = () => {
         {projectData.map((data) => (
           <div
             key={data.id}
-            className="w-full max-[1500px]:w-[800px] max-[1060px]:w-[600px] max-[860px]:w-[450px] max-[580px]:w-[400px] max-[1500px]:mx-auto my-5 relative border-b rounded-lg pb-10 max-[1060px]:pb-0 last:border-b-0 bg-white p-4"
+            className="w-full max-[1500px]:w-[800px] max-[1060px]:w-[600px] max-[860px]:w-[450px] max-[580px]:w-[400px] max-[1500px]:mx-auto my-5 relative border-b rounded-lg pb-10 max-[1060px]:pb-1 last:border-b-0 bg-white p-4"
           >
             <div
               className="flex justify-between items-center
@@ -86,11 +86,10 @@ const Project = () => {
                   {data.img.map((img, index) => (
                     <div
                       key={index}
-                      className={`w-3 h-3 rounded-full ml-2 bottom-3 left-[50%] transform -translate-x-1/2 bg-opacity-75 ${
-                        imageIndices[data.id] === index
-                          ? "bg-[#21277b]"
-                          : "bg-[#5f83b1] bg-opacity-20"
-                      } `}
+                      className={`w-3 h-3 rounded-full ml-2 bottom-3 left-[50%] transform -translate-x-1/2 bg-opacity-75 ${imageIndices[data.id] === index
+                        ? "bg-[#21277b]"
+                        : "bg-[#5f83b1] bg-opacity-20"
+                        } `}
                     />
                   ))}
                 </div>
@@ -175,7 +174,7 @@ const Project = () => {
                     <Link href={data.link2} target="_blank">
                       {data.title}&nbsp;
                       {data.title === "우리동네 경매장" ||
-                      data.title === "3-ENG"
+                        data.title === "3-ENG"
                         ? "(백엔드 서버 내림)"
                         : ""}
                     </Link>
@@ -190,7 +189,7 @@ const Project = () => {
                 />
               )}
             </div>
-            <ReplyList id={data.id} count={count} />
+            <ReplyList id={data.id} count={count} setCount={setCount} />
           </div>
         ))}
       </div>
