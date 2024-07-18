@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Min-young Portfolio",
   description: "Min-young Portfolio",
   icons: {
-    icon: "/ppp.png",
+    icon: "/p_icon.png",
   },
 };
 
