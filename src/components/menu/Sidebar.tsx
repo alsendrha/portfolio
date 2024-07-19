@@ -3,6 +3,7 @@
 import Section01 from "./section01/Section01";
 import Section02 from "./section02/Section02";
 import { usePathname } from "next/navigation";
+
 import Link from "next/link";
 const Sidebar = () => {
   const param = usePathname();

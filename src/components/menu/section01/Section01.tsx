@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import React, { useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
-
+import { motion } from "framer-motion";
 type Section01Props = {
   param: string;
 };
@@ -43,7 +43,18 @@ const Section01 = ({ param }: Section01Props) => {
                 : "items-center"
             }`}
           >
-            <div
+            <motion.div
+              initial={
+                param === "/" || param === "/about"
+                  ? { scale: 0.5 }
+                  : { scale: 1 }
+              }
+              transition={{ duration: 0.5 }}
+              whileInView={
+                param === "/" || param === "/about"
+                  ? { scale: 1 }
+                  : { scale: 1 }
+              }
               className={`${
                 param === "/" || param === "/about"
                   ? "w-[250px] h-[300px] shadow-lg rounded-lg max-[1060px]:ml-11 max-[1060px]:mb-10 "
@@ -57,7 +68,7 @@ const Section01 = ({ param }: Section01Props) => {
                 alt="프로필 이미지"
                 className="object-cover"
               />
-            </div>
+            </motion.div>
 
             <div
               className={`${
@@ -74,9 +85,14 @@ const Section01 = ({ param }: Section01Props) => {
             param === "/" || param === "/about" ? "block" : "hidden"
           }`}
         >
-          <div className="font-bold text-[24px] leading-none text-[#5f83b1]">
+          <motion.div
+            initial={{ y: -50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="font-bold text-[24px] leading-none text-[#5f83b1]"
+          >
             HI! HOW ARE YOU?
-          </div>
+          </motion.div>
           <div>
             <span className="font-bold text-[40px] text-red-600 max-[1135px]:text-[30px] max-[680px]:text-[24px] max-[600px]:text-[20px]">
               I&apos;M&nbsp;
@@ -104,7 +120,12 @@ const Section01 = ({ param }: Section01Props) => {
             <strong>WEB DEVELOPER</strong>
           </span>
         </h1> */}
-          <div className="mt-3 font-bold max-[1350px]:">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="mt-3 font-bold max-[1350px]:"
+          >
             <p>안녕하세요, 저는 김민영입니다.</p>
             <p>
               비전공자이며 코로나로 인해 서비스업에서 개발자로 전향하였습니다.
@@ -118,7 +139,7 @@ const Section01 = ({ param }: Section01Props) => {
               맡은 일에 자부심을 갖고 도전을 경험할 수 있는 회사에서 일하고
               싶습니다.
             </p>
-          </div>
+          </motion.div>
           <div className="mt-32 max-[1060px]:mt-10">
             <div className="font-bold text-2xl mb-5">
               <p className="text-[#5f83b1]">PERSONAL INFOS</p>

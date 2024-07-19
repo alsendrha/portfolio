@@ -54,11 +54,11 @@ const Project = () => {
           </Link>
         ))}
       </div>
-      <div className="px-10  max-[780px]:px-0 my-5">
+      <div className="px-10 max-[780px]:px-0 my-5">
         {projectData.map((data) => (
           <div
             key={data.id}
-            className="w-full max-[1500px]:w-[800px] max-[1060px]:w-[600px] max-[860px]:w-[450px] max-[580px]:w-[400px] max-[1500px]:mx-auto my-5 relative border-b rounded-lg pb-10 max-[1060px]:pb-1 last:border-b-0 bg-white p-4"
+            className="w-full max-[1500px]:w-[800px] max-[1060px]:w-[600px] max-[860px]:w-[450px] max-[580px]:w-[400px] max-[1500px]:mx-auto my-5 relative border-b rounded-lg pb-10 max-[1060px]:pb-1 last:border-b-0 bg-white p-4 shadow-xl"
           >
             <div
               className="flex justify-between items-center
