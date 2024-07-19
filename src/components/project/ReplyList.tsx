@@ -65,7 +65,7 @@ const ReplyList = ({ id, count, setCount }: ReplyProps) => {
   return (
     <div className="mt-5">
       {replyList.length > 0 && (
-        <div className="flex items-center justify-between mb-10">
+        <div className="flex items-center justify-between mb-5">
           <div className="opacity-0">
             <IoMdArrowDropup />
           </div>
