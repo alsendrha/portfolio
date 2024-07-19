@@ -65,7 +65,15 @@ const Project = () => {
                 "
             >
               <div className="flex items-center">
-                <div className="w-[50px] h-[50px] rounded-full bg-[gray]" />
+                <div className="w-[50px] h-[50px] rounded-full relative overflow-hidden">
+                  <Image
+                    src={"/images/my_photo.jpg"}
+                    fill
+                    sizes="1"
+                    className="object-cover"
+                    alt="프로필 이미지"
+                  />
+                </div>
                 <div className="ml-3">
                   <div className="flex items-center">
                     <p className="font-bold  max-[580px]:text-[12px]">
@@ -87,7 +95,7 @@ const Project = () => {
                       className={`w-3 h-3 rounded-full ml-2 bottom-3 left-[50%] transform -translate-x-1/2 bg-opacity-75 ${
                         imageIndices[data.id] === index
                           ? "bg-[#21277b]"
-                          : "bg-[#5f83b1] bg-opacity-20"
+                          : "bg-[#5f83b1] bg-opacity-15"
                       } `}
                     />
                   ))}
