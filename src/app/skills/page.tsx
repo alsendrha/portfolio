@@ -13,7 +13,7 @@ const Skills = () => {
         {skillData.map((item, index) => (
           <div
             key={index}
-            className="w-[300px] h-[330px] border mx-7 my-3 rounded-xl overflow-hidden relative
+            className="w-[300px] h-[330px] shadow-lg hover:shadow border mx-7 my-3 rounded-xl overflow-hidden relative
             hover:before:absolute hover:before:top-[-50%] hover:before:bottom-[-50%] hover:before:left-[-50%] hover:before:right-[-50%] hover:before:bg-gradient-conic hover:before:from-transparent hover:before:to-[#5f83b1] before:animate-spin-slow"
           >
             <div className="absolute top-[3px] left-[3px] right-[3px] bottom-[3px] p-4 rounded-lg bg-white">
