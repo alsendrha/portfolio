@@ -123,7 +123,7 @@ const Project = () => {
               </div>
               <div className="mt-5 ">
                 <BiMessageRounded
-                  className="text-[32px]"
+                  className="text-[32px] cursor-pointer"
                   onClick={() => {
                     setIsOpen(!isOpen);
                     setCurrentProjectId(data.id);
