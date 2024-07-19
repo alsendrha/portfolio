@@ -32,7 +32,7 @@ const Project = () => {
       prevIndices.map((imgIndex, index) =>
         index === projectId
           ? (imgIndex - 1 + projectData[projectId].img.length) %
-          projectData[projectId].img.length
+            projectData[projectId].img.length
           : imgIndex
       )
     );
@@ -76,9 +76,7 @@ const Project = () => {
                   <p className="text-sm">{data.content}</p>
                 </div>
               </div>
-              <div>
-                <SlOptions />
-              </div>
+              <div>{/* <SlOptions /> */}</div>
             </div>
             <div className="mt-3">
               <div className="w-full h-[500px] max-[1060px]:h-[400px] max-[860px]:h-[300px] max-[580px]:h-[250px] relative">
@@ -86,10 +84,11 @@ const Project = () => {
                   {data.img.map((img, index) => (
                     <div
                       key={index}
-                      className={`w-3 h-3 rounded-full ml-2 bottom-3 left-[50%] transform -translate-x-1/2 bg-opacity-75 ${imageIndices[data.id] === index
-                        ? "bg-[#21277b]"
-                        : "bg-[#5f83b1] bg-opacity-20"
-                        } `}
+                      className={`w-3 h-3 rounded-full ml-2 bottom-3 left-[50%] transform -translate-x-1/2 bg-opacity-75 ${
+                        imageIndices[data.id] === index
+                          ? "bg-[#21277b]"
+                          : "bg-[#5f83b1] bg-opacity-20"
+                      } `}
                     />
                   ))}
                 </div>
@@ -174,7 +173,7 @@ const Project = () => {
                     <Link href={data.link2} target="_blank">
                       {data.title}&nbsp;
                       {data.title === "우리동네 경매장" ||
-                        data.title === "3-ENG"
+                      data.title === "3-ENG"
                         ? "(백엔드 서버 내림)"
                         : ""}
                     </Link>
