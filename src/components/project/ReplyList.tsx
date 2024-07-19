@@ -12,6 +12,8 @@ import {
   where,
 } from "firebase/firestore";
 import React, { MouseEvent, useEffect, useRef, useState } from "react";
+import { IoMdArrowDropup, IoMdArrowDropdown } from "react-icons/io";
+import { WiTime10 } from "react-icons/wi";
 import { SlOptions } from "react-icons/sl";
 type ReplyProps = {
   id: number;
@@ -23,6 +25,7 @@ const ReplyList = ({ id, count, setCount }: ReplyProps) => {
   const [replyList, setReplyList] = useState<any[]>([]);
   const [isClick, setIsClick] = useState(false);
   const ref = useRef(null);
+  const [isList, setIsList] = useState(false);
   const getData = async () => {
     try {
       const communityDetail = collection(db, "reply");
@@ -60,33 +63,82 @@ const ReplyList = ({ id, count, setCount }: ReplyProps) => {
   });
 
   return (
-    <div className="mt-10">
-      {replyList.length > 0 &&
-        replyList.map((reply) => (
-          <div key={reply.id} className="mt-5  relative">
-            <div className="flex items-center justify-between">
-              <p>{reply.nickname}</p>
-              <SlOptions onClick={() => setIsClick(reply.id)} />
-            </div>
-            <div className="border rounded-lg p-3 whitespace-pre-wrap mt-3">
-              <p>{reply.content}</p>
-            </div>
-            {isClick === reply.id && (
-              <ul
-                ref={ref}
-                className="absolute right-0 -top-5 w-[100px] flex items-center justify-center"
-                onClick={() => setIsClick(false)}
-              >
-                <li
-                  className="w-full border text-center cursor-pointer rounded-lg bg-[#21277b] text-white hover:bg-white hover:text-[#21277b] hover:border-[#21277b]"
-                  onClick={() => replyDelete(reply.id, reply.password)}
-                >
-                  삭제
-                </li>
-              </ul>
-            )}
+    <div className="mt-5">
+      {replyList.length > 0 && (
+        <div className="flex items-center justify-between mb-10">
+          <div className="opacity-0">
+            <IoMdArrowDropup />
           </div>
-        ))}
+          <div
+            className={`text-center cursor-pointer text-[#5f83b1] ${
+              isList ? "hidden" : "block"
+            }`}
+            onClick={() => setIsList(!isList)}
+          >
+            더보기
+          </div>
+          <div className="cursor-pointer" onClick={() => setIsList(!isList)}>
+            {!isList ? <IoMdArrowDropdown /> : <IoMdArrowDropup />}
+          </div>
+        </div>
+      )}
+      {isList &&
+        replyList.map((reply) => {
+          const givenDate: any = new Date(
+            reply.date.seconds * 1000 + reply.date.nanoseconds / 1000000
+          );
+          const currentDate: any = new Date();
+          const timeDifference = currentDate - givenDate;
+          const minutesDifference = Math.floor(timeDifference / (1000 * 60));
+          let timeAgo;
+          if (minutesDifference < 60) {
+            timeAgo = `${minutesDifference}분 전`;
+          } else {
+            const hoursDifference = Math.floor(minutesDifference / 60);
+            if (hoursDifference < 24) {
+              timeAgo = `${hoursDifference}시간 전`;
+            } else {
+              const daysDifference = Math.floor(hoursDifference / 24);
+              timeAgo = `${daysDifference}일 전`;
+            }
+          }
+          return (
+            <div
+              key={reply.id}
+              className=" relative py-5 border-b last:border-b-0"
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <p className="font-bold pl-3">
+                    {reply.nickname}&nbsp;·&nbsp;
+                  </p>
+                  <div className="flex items-center">
+                    <WiTime10 className="pt-[1px]" />
+                    <p className="text-sm">{timeAgo}</p>
+                  </div>
+                </div>
+                <SlOptions onClick={() => setIsClick(reply.id)} />
+              </div>
+              <div className="rounded-lg px-3 whitespace-pre-wrap">
+                <p>{reply.content}</p>
+              </div>
+              {isClick === reply.id && (
+                <ul
+                  ref={ref}
+                  className="absolute -right-1 -top-0 w-[100px] flex items-center justify-center"
+                  onClick={() => setIsClick(false)}
+                >
+                  <li
+                    className="w-full border text-center cursor-pointer rounded-lg bg-[#21277b] text-white hover:bg-white hover:text-[#21277b] hover:border-[#21277b]"
+                    onClick={() => replyDelete(reply.id, reply.password)}
+                  >
+                    삭제
+                  </li>
+                </ul>
+              )}
+            </div>
+          );
+        })}
     </div>
   );
 };
