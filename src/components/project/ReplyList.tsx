@@ -34,7 +34,6 @@ const ReplyList = ({ id, count, setCount }: ReplyProps) => {
       console.error("Error fetching replies:", error);
     }
   };
-  console.log(replyList);
   const replyDelete = async (id: string, password: string) => {
     const auth = prompt("비밀번호를 입력해주세요");
 
@@ -48,7 +47,7 @@ const ReplyList = ({ id, count, setCount }: ReplyProps) => {
         console.log("댓글 삭제 실패", error);
       }
     } else {
-      return alert("비밀번호가 일치하지 않습니다.");;
+      return alert("비밀번호가 일치하지 않습니다.");
     }
   };
 
