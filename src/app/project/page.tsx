@@ -113,16 +113,16 @@ const Project = () => {
                   ))}
                 </div>
                 <button
-                  className="absolute z-10 top-[50%] left-3 transform translate-y-[-50%] bg-white bg-opacity-50 hover:bg-opacity-100 w-[30px] h-[30px] rounded-full flex justify-center items-center"
+                  className="absolute z-10 top-[50%] left-3 transform translate-y-[-50%] bg-[#5f83b1] bg-opacity-50 hover:bg-opacity-100 w-[30px] h-[30px] rounded-full flex justify-center items-center"
                   onClick={() => prev(data.id)}
                 >
-                  <MdKeyboardArrowLeft className="text-[20px]" />
+                  <MdKeyboardArrowLeft className="text-[20px] text-white" />
                 </button>
                 <button
-                  className="absolute z-10 top-[50%] right-3 transform translate-y-[-50%] bg-white bg-opacity-50 hover:bg-opacity-100 w-[30px] h-[30px] rounded-full flex justify-center items-center"
+                  className="absolute z-10 top-[50%] right-3 transform translate-y-[-50%] bg-[#5f83b1] bg-opacity-50 hover:bg-opacity-100 w-[30px] h-[30px] rounded-full flex justify-center items-center"
                   onClick={() => next(data.id)}
                 >
-                  <MdKeyboardArrowRight className="text-[20px]" />
+                  <MdKeyboardArrowRight className="text-[20px] text-white" />
                 </button>
 
                 <Image

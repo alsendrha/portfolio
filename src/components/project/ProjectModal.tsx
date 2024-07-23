@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { BiSolidRightArrow } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+
 import Link from "next/link";
 type ProjectModalProps = {
   setIsClick: React.Dispatch<React.SetStateAction<boolean>>;
@@ -31,6 +33,15 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
     Array(data.myJob.length).fill(false)
   );
 
+  const [images, setImages] = useState(0);
+  const next = () => {
+    setImages((prev) => (prev + 1 >= data.img.length ? 0 : prev + 1));
+  };
+
+  const prev = () => {
+    setImages((prev) => (prev - 1 < 0 ? data.img.length - 1 : prev - 1));
+  };
+
   const handleClicked = (index: number) => {
     setIsClicked((prevState) => {
       const newState = [...prevState];
@@ -57,7 +68,36 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
                 {data.title}
               </div>
               <div className="w-[1000px] h-[600px] rounded-xl overflow-hidden relative mt-10">
-                <Image src={data.img[0]} fill sizes="1" alt="프로젝트 이미지" />
+                <div className="flex z-10 absolute bottom-3 left-1/2 transform -translate-x-1/2">
+                  {data.img.map((_, index) => (
+                    <div
+                      key={index}
+                      className={`w-3 h-3 rounded-full ml-2 bottom-3 left-[50%] transform -translate-x-1/2 bg-opacity-75 ${
+                        index === images
+                          ? "bg-[#21277b]"
+                          : "bg-[#5f83b1] bg-opacity-15"
+                      } `}
+                    />
+                  ))}
+                </div>
+                <button
+                  className="absolute z-10 top-[50%] left-3 transform translate-y-[-50%] bg-[#5f83b1] bg-opacity-50 hover:bg-opacity-100 w-[30px] h-[30px] rounded-full flex justify-center items-center"
+                  onClick={() => prev()}
+                >
+                  <MdKeyboardArrowLeft className="text-[20px]" />
+                </button>
+                <button
+                  className="absolute z-10 top-[50%] right-3 transform translate-y-[-50%] bg-[#5f83b1] bg-opacity-50 hover:bg-opacity-100 w-[30px] h-[30px] rounded-full flex justify-center items-center"
+                  onClick={() => next()}
+                >
+                  <MdKeyboardArrowRight className="text-[20px]" />
+                </button>
+                <Image
+                  src={data.img[images]}
+                  fill
+                  sizes="1"
+                  alt="프로젝트 이미지"
+                />
               </div>
             </div>
             <div className="w-[1000px] text-black text-lg mt-10">
