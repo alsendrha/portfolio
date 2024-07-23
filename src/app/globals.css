@@ -21,3 +21,7 @@
 body {
   background: radial-gradient(circle, #fff, #f0f0f0);
 }
+
+.back_color {
+  background: radial-gradient(circle, #fff, #f0f0f0);
+}

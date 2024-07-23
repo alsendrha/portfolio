@@ -10,6 +10,7 @@ import { BiMessageRounded } from "react-icons/bi";
 import ReplyInsert from "@/components/project/ReplyInsert";
 import ReplyList from "@/components/project/ReplyList";
 import Link from "next/link";
+import ProjectModal from "@/components/project/ProjectModal";
 
 const Project = () => {
   const [imageIndices, setImageIndices] = useState(projectData.map(() => 0));
@@ -60,6 +61,9 @@ const Project = () => {
             key={data.id}
             className="w-full max-[1500px]:w-[800px] max-[1060px]:w-[600px] max-[860px]:w-[450px] max-[580px]:w-[400px] max-[1500px]:mx-auto my-5 relative border-b rounded-lg pb-3 max-[1060px]:pb-1 last:border-b-0 bg-white p-4 shadow-xl"
           >
+            {isClick && currentProjectId === data.id && (
+              <ProjectModal setIsClick={setIsClick} data={data} />
+            )}
             <div
               className="flex justify-between items-center
                 "
@@ -84,7 +88,15 @@ const Project = () => {
                   <p className="text-sm">{data.content}</p>
                 </div>
               </div>
-              <div>{/* <SlOptions /> */}</div>
+              <div
+                className="border border-[#21277b] rounded-2xl bg-[#21277b] hover:bg-white text-white hover:text-[#21277b] px-3 py-2 cursor-pointer"
+                onClick={() => {
+                  setCurrentProjectId(data.id);
+                  setIsClick(true);
+                }}
+              >
+                자세히 보기
+              </div>
             </div>
             <div className="mt-3">
               <div className="w-full h-[500px] max-[1060px]:h-[400px] max-[860px]:h-[300px] max-[580px]:h-[250px] relative">
@@ -161,7 +173,11 @@ const Project = () => {
                   <p className="text-nowrap font-bold">
                     업&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;무&nbsp;:&nbsp;
                   </p>
-                  <p>{data.myJob}</p>
+                  <p>
+                    {data.myJob.map((tech, index) => (
+                      <span key={index}>{tech.name},&nbsp;</span>
+                    ))}
+                  </p>
                 </div>
                 <div className="flex mt-3">
                   <p className="text-nowrap font-bold">

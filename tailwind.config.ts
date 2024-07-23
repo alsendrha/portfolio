@@ -15,10 +15,23 @@ const config: Config = {
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",
+        "scale-up": "scale-up 0.3s ease-out",
       },
-      keyframes: {},
+      keyframes: {
+        "scale-up": {
+          "0%": {
+            transform: "scale(0.3)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
+      },
     },
   },
-  plugins: [require("@xpd/tailwind-3dtransforms")],
+  plugins: [
+    require("@xpd/tailwind-3dtransforms"),
+    require("tailwind-scrollbar-hide"),
+  ],
 };
 export default config;
