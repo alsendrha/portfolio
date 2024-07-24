@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { BiSolidRightArrow } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
@@ -32,7 +32,7 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
   const [isClicked, setIsClicked] = useState<boolean[]>(
     Array(data.myJob.length).fill(false)
   );
-
+  const [isScrolled, setIsScrolled] = useState(false);
   const [images, setImages] = useState(0);
   const next = () => {
     setImages((prev) => (prev + 1 >= data.img.length ? 0 : prev + 1));
@@ -50,10 +50,17 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
     });
   };
 
+  useEffect(() => {
+    document.body.classList.add("no-scroll");
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, []);
+
   return (
     <div className="absolute w-full z-[9999]">
       <div className="fixed inset-0 flex">
-        <div className=" w-full overflow-auto scrollbar-hide text-white transition-all duration-[0.3s] ease-out animate-scale-up">
+        <div className=" w-full overflow-y-scroll scrollbar-hide text-white transition-all duration-[0.3s] ease-out animate-scale-up">
           <div className="w-full fixed bg-[#5f83b1] h-[90px] top-0 flex justify-end px-10 items-center z-[9999]">
             <div
               className="w-[40px] h-[40px] flex items-center justify-center rounded-full border-[3px] cursor-pointer"
@@ -63,20 +70,19 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
             </div>
           </div>
           <div className="w-full mx-auto flex flex-col items-center mt-[90px] back_color">
+            <div className="font-bold text-5xl mt-5 text-black sticky top-5 max-[810px]:top-[30px] z-[10000]">
+              <p className="max-[1020px]:text-text-5xl max-[810px]:text-2xl max-[610px]:text-xl">{data.title}</p>
+            </div>
             <div className="w-full flex flex-col items-center back_color p-4">
-              <div className="font-bold text-5xl text-white fixed  top-5 z-[10000]">
-                {data.title}
-              </div>
-              <div className="w-[1000px] h-[600px] rounded-xl overflow-hidden relative mt-10">
+              <div className="w-[1000px] max-[1020px]:w-[800px] max-[810px]:w-[600px] max-[610px]:w-[450px] h-[600px] rounded-xl overflow-hidden relative mt-10">
                 <div className="flex z-10 absolute bottom-3 left-1/2 transform -translate-x-1/2">
                   {data.img.map((_, index) => (
                     <div
                       key={index}
-                      className={`w-3 h-3 rounded-full ml-2 bottom-3 left-[50%] transform -translate-x-1/2 bg-opacity-75 ${
-                        index === images
-                          ? "bg-[#21277b]"
-                          : "bg-[#5f83b1] bg-opacity-15"
-                      } `}
+                      className={`w-3 h-3 rounded-full ml-2 bottom-3 left-[50%] transform -translate-x-1/2 bg-opacity-75 ${index === images
+                        ? "bg-[#21277b]"
+                        : "bg-[#5f83b1] bg-opacity-15"
+                        } `}
                     />
                   ))}
                 </div>
@@ -100,7 +106,7 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
                 />
               </div>
             </div>
-            <div className="w-[1000px] text-black text-lg mt-10">
+            <div className="w-[1000px] max-[1020px]:w-[800px] max-[810px]:w-[600px] max-[610px]:w-[450px] text-black text-lg mt-10">
               <p>{data.detail}</p>
               <Link href={data.github} target="_blank">
                 <div className="flex flex-col justify-center items-center mt-10">
@@ -109,7 +115,7 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
                 </div>
               </Link>
             </div>
-            <div className="w-[1000px] mt-10">
+            <div className="w-[1000px] max-[1020px]:w-[800px] max-[810px]:w-[600px] max-[610px]:w-[450px] mt-10">
               <div className="mb-10">
                 <div className="flex items-center mb-3">
                   <div className="w-[22px] h-[22px] relative mr-2">
@@ -134,7 +140,7 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
                 </div>
               </div>
             </div>
-            <div className="w-[1000px] mt-10">
+            <div className="w-[1000px] max-[1020px]:w-[800px] max-[810px]:w-[600px] max-[610px]:w-[450px] mt-10">
               <div className="mb-10">
                 <div className="flex items-center mb-3">
                   <div className="w-[23px] h-[23px] relative mr-2">
@@ -158,9 +164,8 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
                     >
                       <div className="w-full p-3 text-xl flex items-center text-black  bg-[#c6c6c6] rounded-xl my-2 cursor-pointer">
                         <BiSolidRightArrow
-                          className={`text-sm transform transition-all duration-[0.3s] ease-out  ${
-                            isClicked[index] ? "rotate-90" : ""
-                          }`}
+                          className={`text-sm transform transition-all duration-[0.3s] ease-out  ${isClicked[index] ? "rotate-90" : ""
+                            }`}
                         />
                         &nbsp;
                         {tech.name}

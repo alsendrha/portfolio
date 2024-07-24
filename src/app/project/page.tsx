@@ -33,7 +33,7 @@ const Project = () => {
       prevIndices.map((imgIndex, index) =>
         index === projectId
           ? (imgIndex - 1 + projectData[projectId].img.length) %
-            projectData[projectId].img.length
+          projectData[projectId].img.length
           : imgIndex
       )
     );
@@ -80,16 +80,20 @@ const Project = () => {
                 </div>
                 <div className="ml-3">
                   <div className="flex items-center">
-                    <p className="font-bold  max-[580px]:text-[12px]">
+                    <p className="font-bold max-[580px]:text-xs">
                       {data.title}&nbsp;·&nbsp;
                     </p>
-                    <p className="">{data.date}</p>
+                    <p className="max-[860px]:text-xs">{data.date}</p>
                   </div>
                   <p className="text-sm">{data.content}</p>
                 </div>
               </div>
+              <div className="hidden text-white text-[8px] w-[30px] h-[30px] cursor-pointer rounded-full bg-[#21277b] max-[580px]:flex justify-center items-center" onClick={() => {
+                setCurrentProjectId(data.id);
+                setIsClick(true);
+              }}>자세히</div>
               <div
-                className="border border-[#21277b] rounded-2xl bg-[#21277b] hover:bg-white text-white hover:text-[#21277b] px-3 py-2 cursor-pointer"
+                className="border max-[580px]:hidden text-nowrap border-[#21277b] rounded-2xl bg-[#21277b] hover:bg-white text-white max-[860px]:text-xs hover:text-[#21277b] px-3 max-[860px]:px-1 py-2 cursor-pointer"
                 onClick={() => {
                   setCurrentProjectId(data.id);
                   setIsClick(true);
@@ -104,11 +108,10 @@ const Project = () => {
                   {data.img.map((img, index) => (
                     <div
                       key={index}
-                      className={`w-3 h-3 rounded-full ml-2 bottom-3 left-[50%] transform -translate-x-1/2 bg-opacity-75 ${
-                        imageIndices[data.id] === index
-                          ? "bg-[#21277b]"
-                          : "bg-[#5f83b1] bg-opacity-15"
-                      } `}
+                      className={`w-3 h-3 rounded-full ml-2 bottom-3 left-[50%] transform -translate-x-1/2 bg-opacity-75 ${imageIndices[data.id] === index
+                        ? "bg-[#21277b]"
+                        : "bg-[#5f83b1] bg-opacity-15"
+                        } `}
                     />
                   ))}
                 </div>
@@ -197,7 +200,7 @@ const Project = () => {
                     <Link href={data.link2} target="_blank">
                       {data.title}&nbsp;
                       {data.title === "우리동네 경매장" ||
-                      data.title === "3-ENG"
+                        data.title === "3-ENG"
                         ? "(백엔드 서버 내림)"
                         : ""}
                     </Link>

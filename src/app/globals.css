@@ -25,3 +25,7 @@ body {
 .back_color {
   background: radial-gradient(circle, #fff, #f0f0f0);
 }
+
+.no-scroll {
+  overflow: hidden;
+}
