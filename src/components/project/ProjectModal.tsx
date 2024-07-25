@@ -60,7 +60,7 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
   return (
     <div className="absolute w-full z-[9999]">
       <div className="fixed inset-0 flex">
-        <div className=" w-full overflow-y-scroll scrollbar-hide text-white transition-all duration-[0.3s] ease-out animate-scale-up">
+        <div className=" w-full overflow-auto scrollbar-hide text-white transition-all duration-[0.3s] ease-out animate-scale-up">
           <div className="w-full fixed bg-[#5f83b1] h-[90px] top-0 flex justify-end px-10 items-center z-[9999]">
             <div
               className="w-[40px] h-[40px] flex items-center justify-center rounded-full border-[3px] cursor-pointer"
