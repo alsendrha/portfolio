@@ -81,6 +81,8 @@ export const projectData = [
       "/images/project/3eng-01.gif",
       "/images/project/3eng-02.png",
       "/images/project/3eng-03.png",
+      "/images/project/3eng-04.png",
+      "/images/project/3eng-05.png",
     ],
     title: "3-ENG",
     content: "매일 AI 5문제 영어",
