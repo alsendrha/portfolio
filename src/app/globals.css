@@ -19,11 +19,13 @@
 }
 
 body {
-  background: radial-gradient(circle, #fff, #f0f0f0);
+  /* background: radial-gradient(circle, #fff, #f0f0f0); */
+  background: #e0dcce;
 }
 
 .back_color {
-  background: radial-gradient(circle, #fff, #f0f0f0);
+  /* background: radial-gradient(circle, #fff, #f0f0f0); */
+  background: #e0dcce;
 }
 
 .no-scroll {
