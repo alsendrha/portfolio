@@ -184,7 +184,7 @@ const Project = () => {
                 </div>
                 <div className="flex mt-3">
                   <p className="text-nowrap font-bold">
-                    링&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;크&nbsp;:&nbsp;
+                    영&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;상&nbsp;:&nbsp;
                   </p>
                   <p className="text-blue-500">
                     <Link href={data.link} target="_blank">
@@ -194,7 +194,7 @@ const Project = () => {
                 </div>
                 <div className="flex mt-3">
                   <p className="text-nowrap font-bold">
-                    링&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;크2&nbsp;:&nbsp;
+                    링&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;크&nbsp;:&nbsp;
                   </p>
                   <p className="text-blue-500">
                     <Link href={data.link2} target="_blank">
