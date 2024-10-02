@@ -38,21 +38,10 @@ const Section01 = ({ param }: Section01Props) => {
                 : "items-center"
             }`}
           >
-            <motion.div
-              initial={
-                param === "/" || param === "/about"
-                  ? { scale: 0.5 }
-                  : { scale: 1 }
-              }
-              transition={{ duration: 0.5 }}
-              whileInView={
-                param === "/" || param === "/about"
-                  ? { scale: 1 }
-                  : { scale: 1 }
-              }
+            <div
               className={`${
                 param === "/" || param === "/about"
-                  ? "w-[250px] h-[300px] shadow-lg rounded-lg max-[1060px]:ml-11 max-[1060px]:mb-10 "
+                  ? "w-[250px] h-[300px] rounded-lg max-[1060px]:ml-11 max-[1060px]:mb-10 "
                   : "w-[80px] h-[80px] rounded-full border"
               }    relative overflow-hidden transition-all duration-[0.3s] ease-out`}
             >
@@ -63,7 +52,7 @@ const Section01 = ({ param }: Section01Props) => {
                 alt="프로필 이미지"
                 className="object-cover"
               />
-            </motion.div>
+            </div>
 
             <div
               className={`${
