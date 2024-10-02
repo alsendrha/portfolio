@@ -21,7 +21,7 @@ const Sidebar = () => {
       <Section02 param={param} />
       <Link
         href={"/skills"}
-        className={`max-[1060px]:ml-10 flex justify-center ${
+        className={`max-[1060px]: flex justify-center ${
           param === "/" || param === "/about" ? "block" : "hidden"
         }`}
       >

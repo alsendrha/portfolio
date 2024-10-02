@@ -32,7 +32,7 @@ const ContentGroup = ({
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-col text-[#2C2C2E] items-end mb-16 max-[925px]:mb-8"
+          className="flex flex-col text-[#2C2C2E] items-end max-[925px]:items-center mb-16 max-[925px]:mb-8"
         >
           {children1}
         </motion.div>
@@ -43,7 +43,7 @@ const ContentGroup = ({
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-col text-[#2C2C2E] justify-start mb-16 max-[925px]:mb-8"
+          className="flex flex-col text-[#2C2C2E] justify-start max-[925px]:items-center mb-16 max-[925px]:mb-8"
         >
           {children2}
         </motion.div>
