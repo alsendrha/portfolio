@@ -7,16 +7,15 @@ type Section02Props = {
 const Section02 = ({ param }: Section02Props) => {
   return (
     <section
-      className={` mt-20  ml-20 max-[1060px]:ml-6 ${
-        param === "/" || param === "/about" ? "block" : "hidden"
-      }`}
+      className={` mt-20  ml-20 max-[1060px]:ml-6 ${param === "/" || param === "/about" ? "block" : "hidden"
+        }`}
     >
       <div>
         <div className="relative flex items-end">
           <h2 className="text-[150px] max-[600px]:text-[100px] opacity-25 leading-[160px] font-bold">
             02
           </h2>
-          <p className="absolute left-24 text-[50px] max-[600px]:text-[30px] max-[600px]:left-[65px] max-[600px]:bottom-7 font-bold">
+          <p className="absolute left-24 text-[50px] text-[#e65124] max-[600px]:text-[30px] max-[600px]:left-[65px] max-[600px]:bottom-7 font-bold">
             STORY
           </p>
         </div>
@@ -34,7 +33,7 @@ const Section02 = ({ param }: Section02Props) => {
                   transition={{ duration: 1 }}
                   className="flex flex-col justify-start items-end relative right-[60px] max-[980px]:right-[20px] max-[925px]:right-0"
                 >
-                  <h2 className="text-[50px] leading-none font-bold text-[#21277b]">
+                  <h2 className="text-[42px] leading-none font-semibold ">
                     2021 ~ 22
                   </h2>
                   <h2 className="text-[24px] text-[#5f83b1]">12.08 ~ 06.07</h2>
@@ -70,9 +69,9 @@ const Section02 = ({ param }: Section02Props) => {
                   initial={{ x: 50, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1 }}
-                  className="flex flex-col justify-start items-start relative left-[80px] max-[980px]:left-[40px] max-[925px]:left-0"
+                  className="flex flex-col justify-start items-start relative left-[60px] max-[980px]:left-[40px] max-[925px]:left-0"
                 >
-                  <h2 className="text-[50px] leading-none font-bold text-[#21277b]">
+                  <h2 className="text-[42px] leading-none font-semibold">
                     2022
                   </h2>
                   <h2 className="text-[24px] text-[#5f83b1]">06.25 ~ 08.31</h2>
@@ -88,7 +87,7 @@ const Section02 = ({ param }: Section02Props) => {
                   transition={{ duration: 1 }}
                   className="flex flex-col justify-start items-end relative right-[60px] max-[980px]:right-[20px] max-[925px]:right-0"
                 >
-                  <h2 className="text-[50px] leading-none font-bold text-[#21277b]">
+                  <h2 className="text-[42px] leading-none font-bold ">
                     2022 ~ 23
                   </h2>
                   <h2 className="text-[24px] text-[#5f83b1]">11.01 ~ 02.01</h2>
@@ -121,7 +120,7 @@ const Section02 = ({ param }: Section02Props) => {
                   <p>C2C 캠핑용품 공유 플랫폼</p>
                   <p>flutter앱 초기모델 개발 배포</p>
                   <p>(android)</p>
-                  <p>급여 문제로 퇴사(월 100만원)</p>
+
                 </motion.div>
                 <motion.div
                   initial={{ x: 50, opacity: 0 }}
@@ -129,7 +128,7 @@ const Section02 = ({ param }: Section02Props) => {
                   transition={{ duration: 1 }}
                   className="flex flex-col justify-start items-start relative left-[70px] max-[980px]:left-[30px] max-[925px]:left-0"
                 >
-                  <h2 className="text-[50px] leading-none font-bold text-[#21277b]">
+                  <h2 className="text-[42px] leading-none font-semibold ">
                     2023
                   </h2>
                   <h2 className="text-[24px] text-[#5f83b1]">05.01 ~ 08.31</h2>
@@ -145,7 +144,7 @@ const Section02 = ({ param }: Section02Props) => {
                   transition={{ duration: 1 }}
                   className="flex flex-col justify-start items-end relative right-[70px] max-[980px]:right-[30px] max-[925px]:right-0"
                 >
-                  <h2 className="text-[50px] leading-none font-bold text-[#21277b]">
+                  <h2 className="text-[42px] leading-none font-semibold ">
                     2023
                   </h2>
                   <h2 className="text-[24px] text-[#5f83b1]">09.01 ~ 10.31</h2>
@@ -181,9 +180,9 @@ const Section02 = ({ param }: Section02Props) => {
                   initial={{ x: 50, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1 }}
-                  className="flex flex-col justify-start items-start relative left-[105px] max-[980px]:left-[65px] max-[925px]:left-0"
+                  className="flex flex-col justify-start items-start relative left-[80px] max-[980px]:left-[65px] max-[925px]:left-0"
                 >
-                  <h2 className="text-[50px] leading-none font-bold text-[#21277b]">
+                  <h2 className="text-[42px] leading-none font-semibold ">
                     2023 ~ 24
                   </h2>
                   <h2 className="text-[24px] text-[#5f83b1]">12.07 ~ 06.04</h2>

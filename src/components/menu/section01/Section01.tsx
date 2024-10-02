@@ -11,37 +11,34 @@ const Section01 = ({ param }: Section01Props) => {
   return (
     <section>
       <div
-        className={`${
-          param === "/" || param === "/about" ? "block" : "hidden"
-        }`}
+        className={`${param === "/" || param === "/about" ? "block" : "hidden"
+          }`}
       >
         <div className="relative flex items-end ml-20 max-[1060px]:ml-6">
           <h2 className="text-[150px] max-[600px]:text-[100px] opacity-25 leading-[160px] font-bold">
             01
           </h2>
-          <p className="absolute left-24 text-[50px] max-[600px]:text-[30px] max-[600px]:left-[65px] max-[600px]:bottom-7 font-bold">
+          <p className="absolute left-24 text-[50px] text-[#e65124] max-[600px]:text-[30px] max-[600px]:left-[65px] max-[600px]:bottom-7 font-bold">
             PROFILE
           </p>
         </div>
       </div>
       <div
-        className={`${
-          param === "/" || param === "/about"
+        className={`${param === "/" || param === "/about"
             ? "flex max-[1060px]:block mt-10 max-[600px]:mt-0 ml-20 max-[1060px]:ml-3 relative"
             : param === "/skills"
-            ? "w-[300px]"
-            : "w-[450px]"
-        }  px-5 transition-all duration-[0.3s] ease-out`}
+              ? "w-[300px]"
+              : "w-[450px]"
+          }  px-5 transition-all duration-[0.3s] ease-out`}
       >
         <div
           className={` ${param === "/" || param === "/about" ? "" : "mt-10"}`}
         >
           <div
-            className={`flex ${
-              param === "/" || param === "/about"
+            className={`flex ${param === "/" || param === "/about"
                 ? "items-start"
                 : "items-center"
-            }`}
+              }`}
           >
             <motion.div
               initial={
@@ -55,11 +52,10 @@ const Section01 = ({ param }: Section01Props) => {
                   ? { scale: 1 }
                   : { scale: 1 }
               }
-              className={`${
-                param === "/" || param === "/about"
+              className={`${param === "/" || param === "/about"
                   ? "w-[250px] h-[300px] shadow-lg rounded-lg max-[1060px]:ml-11 max-[1060px]:mb-10 "
                   : "w-[80px] h-[80px] rounded-full border"
-              }    relative overflow-hidden transition-all duration-[0.3s] ease-out`}
+                }    relative overflow-hidden transition-all duration-[0.3s] ease-out`}
             >
               <Image
                 src={"/images/my_photo.jpg"}
@@ -71,9 +67,8 @@ const Section01 = ({ param }: Section01Props) => {
             </motion.div>
 
             <div
-              className={`${
-                param === "/" || param === "/about" ? "hidden" : "block"
-              } ml-4 text-[20px]`}
+              className={`${param === "/" || param === "/about" ? "hidden" : "block"
+                } ml-4 text-[20px]`}
             >
               <p className="font-bold text-[#21277b]">FRONTEND</p>
               <p>김민영</p>
@@ -81,9 +76,8 @@ const Section01 = ({ param }: Section01Props) => {
           </div>
         </div>
         <div
-          className={`ml-12 ${
-            param === "/" || param === "/about" ? "block" : "hidden"
-          }`}
+          className={`ml-12 ${param === "/" || param === "/about" ? "block" : "hidden"
+            }`}
         >
           <motion.div
             initial={{ y: -50, opacity: 0 }}

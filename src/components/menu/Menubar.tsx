@@ -26,7 +26,7 @@ const Menubar = () => {
       <div className="mt-10 px-5  max-[1230px]:px-0">
         <div className="px-2">
           <Link href={"/"}>
-            <p className="font-bold text-3xl text-[#21277b] transform transition-all duration-[0.3s] ease-out max-[1230px]:text-[16px]">
+            <p className="font-bold text-3xl text-[#e65124] transform transition-all duration-[0.3s] ease-out max-[1230px]:text-[16px]">
               PORTFOLIO
             </p>
           </Link>
@@ -47,12 +47,11 @@ const Menubar = () => {
                   {item.name}
                 </div>
                 <p
-                  className={`ml-3  ${
-                    pathName === item.link ||
+                  className={`ml-3  ${pathName === item.link ||
                     (pathName === "/" && item.link === "/about")
-                      ? "font-bold"
-                      : "font-light"
-                  } max-[1230px]:hidden`}
+                    ? "font-bold"
+                    : "font-light"
+                    } max-[1230px]:hidden`}
                 >
                   {item.name}
                 </p>
