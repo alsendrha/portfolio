@@ -39,7 +39,7 @@ const Menubar = () => {
               target={item.name === "GITHUB" ? "_blank" : "_self"}
               className="max-[1230px]:flex  max-[1230px]:justify-center"
             >
-              <div className="flex relative items-center p-2 mt-2 text-[#5f83b1] rounded-[10px] group hover:bg-[#9ad9ea] hover:bg-opacity-20 max-[1230px]:w-fit max-[1230px]:rounded-full max-[1230px]:p-5 max-[1230px]:bg-white max-[1230px]:mt-5">
+              <div className="flex relative items-center p-2 mt-2 text-[#ffa68b] rounded-[10px] group hover:bg-[#9ad9ea] hover:bg-opacity-20 max-[1230px]:w-fit max-[1230px]:rounded-full max-[1230px]:p-5 max-[1230px]:bg-white max-[1230px]:mt-5">
                 <div className="group-hover:scale-110 group-hover:max-[1230px]:opacity-0">
                   {item.icon}
                 </div>
@@ -47,11 +47,12 @@ const Menubar = () => {
                   {item.name}
                 </div>
                 <p
-                  className={`ml-3  ${pathName === item.link ||
+                  className={`ml-3  ${
+                    pathName === item.link ||
                     (pathName === "/" && item.link === "/about")
-                    ? "font-bold"
-                    : "font-light"
-                    } max-[1230px]:hidden`}
+                      ? "font-bold"
+                      : "font-light"
+                  } max-[1230px]:hidden`}
                 >
                   {item.name}
                 </p>
