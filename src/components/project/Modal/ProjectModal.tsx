@@ -5,6 +5,7 @@ import ModalTitle from "./ModalTitle";
 import ModalImage from "./ModalImage";
 import ModalContent from "./ModalContent";
 import ModalSubTitle from "./ModalSubTitle";
+import Image from "next/image";
 
 type ProjectModalProps = {
   setIsClick: React.Dispatch<React.SetStateAction<boolean>>;
@@ -30,7 +31,7 @@ type ProjectModalProps = {
 
 const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
   const [isClicked, setIsClicked] = useState<boolean[]>(
-    Array(data.myJob.length).fill(false)
+    Array(data.myJob.length).fill(true)
   );
 
   const handleClicked = (index: number) => {
@@ -49,10 +50,10 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
   }, []);
 
   return (
-    <div className="absolute w-full z-[9999]">
+    <div className="absolute bg-white w-full z-[9999]">
       <div className="fixed inset-0 flex">
         <div className=" w-full overflow-auto scrollbar-hide text-white transition-all duration-[0.3s] ease-out animate-scale-up">
-          <div className="w-full fixed bg-[#ffa68b] h-[90px] top-0 flex justify-end px-10 items-center z-[9999]">
+          <div className="w-full fixed bg-[#ffa68b] bg-opacity-70 h-[70px] top-0 flex justify-end px-10 items-center z-[9999]">
             <div
               className="w-[40px] h-[40px] flex items-center justify-center rounded-full border-[3px] cursor-pointer"
               onClick={() => setIsClick(false)}
@@ -60,20 +61,23 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
               <IoClose className="text-[32px]" />
             </div>
           </div>
-          <div className="w-full mx-auto flex flex-col items-center mt-[90px] back_color">
+          <div className="w-full mx-auto flex flex-col items-center pt-[90px] back_color">
             <ModalTitle title={data.title} />
             <ModalImage data={data} />
             <ModalContent data={data} />
             <div className="w-[1000px] max-[1020px]:w-[800px] max-[810px]:w-[600px] max-[610px]:w-[450px] mt-10">
               <div className="mb-10">
                 <ModalSubTitle iconUrl="/images/option.svg" title="SKILLS" />
-                <div className="w-full bg-[#c6c6c6] rounded-xl p-3 ">
-                  {data.tech.map((tech, index) => (
-                    <div
-                      key={index}
-                      className="w-full p-3 text-xl text-black rounded-xl bg-white my-5"
-                    >
-                      {index + 1}.&nbsp;{tech.replace(/,/g, "")}
+                <div className=" flex max-[810px]:flex-col w-full rounded-xl p-3 ">
+                  {data.techImg.map((tech, index) => (
+                    <div className="w-[200px] h-[80px] mr-3 relative overflow-hidden">
+                      <Image
+                        src={tech}
+                        fill
+                        sizes="1"
+                        className="object-contain"
+                        alt="스킬 이미지"
+                      />
                     </div>
                   ))}
                 </div>
@@ -92,13 +96,12 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
                       className="flex flex-col"
                       onClick={() => handleClicked(index)}
                     >
-                      <div className="w-full p-3 text-xl flex items-center text-black  bg-[#c6c6c6] rounded-xl my-2 cursor-pointer">
+                      <div className="w-full p-3 text-xl flex items-center text-white  bg-[#e65124] rounded-xl my-2 cursor-pointer">
                         <BiSolidRightArrow
-                          className={`text-sm transform transition-all duration-[0.3s] ease-out  ${
+                          className={`text-sm mr-4 transform transition-all duration-[0.3s] ease-out  ${
                             isClicked[index] ? "rotate-90" : ""
                           }`}
                         />
-                        &nbsp;
                         {tech.name}
                       </div>
                       {isClicked[index] && (
