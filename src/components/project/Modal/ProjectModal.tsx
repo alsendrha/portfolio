@@ -70,7 +70,10 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
                 <ModalSubTitle iconUrl="/images/option.svg" title="SKILLS" />
                 <div className=" flex max-[810px]:flex-col w-full rounded-xl p-3 ">
                   {data.techImg.map((tech, index) => (
-                    <div className="w-[200px] h-[80px] mr-3 relative overflow-hidden">
+                    <div
+                      key={index}
+                      className="w-[200px] h-[80px] mr-3 relative overflow-hidden"
+                    >
                       <Image
                         src={tech}
                         fill
