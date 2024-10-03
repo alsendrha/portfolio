@@ -20,10 +20,11 @@ const ProjectImage = ({ projectData, data }: ProjectImageProps) => {
       <Image
         src={data.img[imageIndices[data.id]]}
         fill
-        sizes="1"
+        sizes="100vw"
         className="object-contain"
         alt="프로젝트 이미지"
         priority
+        quality={75}
       />
     </div>
   );

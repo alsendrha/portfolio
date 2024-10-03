@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { projectData } from "@/data/ProjectData";
-import MoreButton from "@/components/project/MoreButton";
 import ProjectImage from "@/components/project/ProjectImage";
 import ProjectContentText from "@/components/project/ProjectContentText/ProjectContentText";
 import TitleBar from "@/components/skills/TitleBar";
