@@ -21,9 +21,15 @@ const ProjectItem = ({
 }: ProjectItemProps) => {
   return (
     <div className="mb-[200px]">
-      <div className="flex bg-white bg-opacity-80 px-5 py-[100px] rounded-xl">
+      <div
+        className={`flex ${
+          data.title === "3-ENG"
+            ? "max-[1350px]:flex-col-reverse"
+            : "max-[1350px]:flex-col"
+        } max-[1350px]:items-center justify-between bg-white bg-opacity-65 px-5 py-[100px] rounded-xl`}
+      >
         {children}
-        <div className="ml-20">{children2}</div>
+        <div className="">{children2}</div>
         {isClick && currentProjectId === data.id && (
           <ProjectModal key={data.id} setIsClick={setIsClick} data={data} />
         )}
