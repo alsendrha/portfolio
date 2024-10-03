@@ -15,10 +15,11 @@
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
-  src: url("/fonts/Pretendard-Regular.ttf") format("truetype");
+  src: url("/fonts/Pretendard-Regular.otf") format("truetype");
 }
 
 body {
+  font-family: "Pretendard", sans-serif;
   /* background: radial-gradient(circle, #fff, #f0f0f0); */
   background: #e0dcce;
 }
