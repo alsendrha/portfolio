@@ -24,29 +24,26 @@ const Project = () => {
             currentProjectId={currentProjectId}
             setIsClick={setIsClick}
             key={data.id}
-            children={
-              data.title === "3-ENG" ? (
-                <ProjectContentText
-                  data={data}
-                  setCurrentProjectId={setCurrentProjectId}
-                  setIsClick={setIsClick}
-                />
-              ) : (
-                <ProjectImage projectData={projectData} data={data} />
-              )
-            }
-            children2={
-              data.title === "3-ENG" ? (
-                <ProjectImage projectData={projectData} data={data} />
-              ) : (
-                <ProjectContentText
-                  data={data}
-                  setCurrentProjectId={setCurrentProjectId}
-                  setIsClick={setIsClick}
-                />
-              )
-            }
-          />
+          >
+            {data.title === "3-ENG" ? (
+              <ProjectContentText
+                data={data}
+                setCurrentProjectId={setCurrentProjectId}
+                setIsClick={setIsClick}
+              />
+            ) : (
+              <ProjectImage projectData={projectData} data={data} />
+            )}
+            {data.title === "3-ENG" ? (
+              <ProjectImage projectData={projectData} data={data} />
+            ) : (
+              <ProjectContentText
+                data={data}
+                setCurrentProjectId={setCurrentProjectId}
+                setIsClick={setIsClick}
+              />
+            )}
+          </ProjectItem>
         ))}
       </div>
     </div>

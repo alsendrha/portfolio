@@ -8,7 +8,6 @@ type ProjectItemProps = {
   currentProjectId: number;
   setIsClick: any;
   children: React.ReactNode;
-  children2: React.ReactNode;
 };
 
 const ProjectItem = ({
@@ -17,7 +16,6 @@ const ProjectItem = ({
   currentProjectId,
   setIsClick,
   children,
-  children2,
 }: ProjectItemProps) => {
   return (
     <div className="mb-[200px]">
@@ -29,7 +27,6 @@ const ProjectItem = ({
         } max-[1350px]:items-center justify-between bg-white bg-opacity-65 px-8 py-[100px] rounded-xl`}
       >
         {children}
-        <div className="">{children2}</div>
         {isClick && currentProjectId === data.id && (
           <ProjectModal key={data.id} setIsClick={setIsClick} data={data} />
         )}
