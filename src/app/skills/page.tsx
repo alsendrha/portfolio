@@ -6,7 +6,7 @@ import React from "react";
 const Skills = () => {
   return (
     <div className="w-full px-4 max-w-[1200px]">
-      <TitleBar />
+      <TitleBar title="SKILLS" />
       <div className="w-full border my-2" />
       <div className="flex justify-center flex-wrap">
         {skillData.map((item, index) => (

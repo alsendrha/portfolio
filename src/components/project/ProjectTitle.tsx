@@ -12,15 +12,6 @@ type ProjectTitleProps = {
 const ProjectTitle = ({ data }: ProjectTitleProps) => {
   return (
     <div className="flex items-center">
-      <div className="w-[50px] h-[50px] rounded-full relative overflow-hidden">
-        <Image
-          src={"/images/my_photo.jpg"}
-          fill
-          sizes="1"
-          className="object-cover"
-          alt="프로필 이미지"
-        />
-      </div>
       <div className="ml-3">
         <div className="flex items-center">
           <p className="font-bold max-[580px]:text-xs">

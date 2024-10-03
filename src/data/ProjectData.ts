@@ -78,7 +78,7 @@ export const projectData = [
   {
     id: 1,
     img: [
-      "/images/project/3eng-01.gif",
+      "/images/project/3eng-01.png",
       "/images/project/3eng-02.png",
       "/images/project/3eng-03.png",
       "/images/project/3eng-04.png",
