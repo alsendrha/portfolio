@@ -26,7 +26,7 @@ const ProjectItem = ({
           data.title === "3-ENG"
             ? "max-[1350px]:flex-col-reverse"
             : "max-[1350px]:flex-col"
-        } max-[1350px]:items-center justify-between bg-white bg-opacity-65 px-5 py-[100px] rounded-xl`}
+        } max-[1350px]:items-center justify-between bg-white bg-opacity-65 px-8 py-[100px] rounded-xl`}
       >
         {children}
         <div className="">{children2}</div>
