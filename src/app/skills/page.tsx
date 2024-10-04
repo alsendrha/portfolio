@@ -16,15 +16,19 @@ const Skills = () => {
             hover:before:absolute hover:before:top-[-50%] hover:before:bottom-[-50%] hover:before:left-[-50%] hover:before:right-[-50%] hover:before:bg-gradient-conic hover:before:from-transparent hover:before:to-[#ffa68b] before:animate-spin-slow"
           >
             <div className="absolute top-[3px] left-[3px] right-[3px] bottom-[3px] p-2 rounded-lg bg-white">
-              <div className="flex flex-col items-center">
-                <div className="w-[100px] h-[50px] relative">
-                  <Image
-                    src={item.img}
-                    fill
-                    sizes="1"
-                    className="object-contain"
-                    alt="스킬 이미지"
-                  />
+              <div className="pt-2 flex flex-col items-center">
+                <div className="flex items-center justify-center">
+                  {item.img.map((item, index) => (
+                    <div key={index} className="w-[50px] h-[50px] relative">
+                      <Image
+                        src={item.img!}
+                        fill
+                        sizes="1"
+                        className="object-contain"
+                        alt="스킬 이미지"
+                      />
+                    </div>
+                  ))}
                 </div>
                 <p className="mt-3 text-xl text-[#e65124] font-semibold">
                   {item.name}

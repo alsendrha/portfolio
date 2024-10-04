@@ -198,60 +198,64 @@ export const projectData = [
 export const skillData = [
   {
     name: "Html,Css,Js",
-    img: "/images/logo/html.png",
+    img: [
+      { img: "/images/logo/html.png" },
+      { img: "/images/logo/javascript.png" },
+      { img: "/images/logo/css.png" },
+    ],
     content:
       "- 원하는 UI를 실용적이고, 익숙하게 만들어 낼수 있습니다.\n- Css의 기본적인 문법을 사용할수 있습니다.\n다양한 속성과 메소드 사용이 가능합니다.\n- 비동기 통신으로 데이터를 요청을 할 수 있습니다.",
   },
   {
     name: "React",
-    img: "/images/logo/react.png",
+    img: [{ img: "/images/logo/react.png" }],
     content:
       "- 컴포넌트 생명주기와 속성을 사용할 수 있습니다.\n- 라우터 설정을 하여 자유롭게 페이지 이동이 가능합니다.\n- props와 context를 활용하여 데이터 전달이 가능합니다.\n- provider 라이브러리 사용이 가능합니다.",
   },
   {
     name: "NextJs",
-    img: "/images/logo/nextjs.png",
+    img: [{ img: "/images/logo/nextjs.png" }],
     content:
       "- Next 14 SSR과 CSR을 구분지어서 사용 가능합니다.\n- 폴더 방식의 routing을 이해하고 사용 가능합니다.\n- loading, not-found등 기본적인 페이지 사용이 가능합니다.",
   },
   {
     name: "Typescript",
-    img: "/images/logo/typescript.png",
+    img: [{ img: "/images/logo/typescript.png" }],
     content: "- 타입을 지정하여 개발 환경을 쾌적하게 만들수있습니다.",
   },
   {
     name: "Axios",
-    img: "/images/logo/axios.png",
+    img: [{ img: "/images/logo/axios.png" }],
     content:
       "- axios를 통해서 비동기 통신이 가능합니다.\n- interceptor 사용이 가능합니다.",
   },
   {
     name: "React-query",
-    img: "/images/logo/react-query.png",
+    img: [{ img: "/images/logo/react-query.png" }],
     content:
       "- useQuery와 useMutation을 사용하여 데이터를 요청할수 있습니다.\n- 기본적인 기능들을 사용할수 있습니다.",
   },
   {
     name: "Styled-components",
-    img: "/images/logo/styled_components.png",
+    img: [{ img: "/images/logo/styled_components.png" }],
     content:
       "- 태그를 이용한 css작성이 가능합니다.\n- props를 활용하여 css 변경이 가능합니다.",
   },
   {
     name: "Tailwindcss",
-    img: "/images/logo/tailwindcss.png",
+    img: [{ img: "/images/logo/tailwindcss.png" }],
     content:
       "- 기본적인 css작성이 가능합니다.\n- 옵션을 통해 애니메이션등의 기능을 사용할수 있습니다.",
   },
   {
     name: "Vanilla-extract/css",
-    img: "/images/logo/vanilla-extract.png",
+    img: [{ img: "/images/logo/vanilla-extract.png" }],
     content:
       "- 기본적인 css작성이 가능합니다.\n- props를 활용하여 css 변경이 가능힙니다.",
   },
   {
     name: "Zustand",
-    img: "/images/logo/zustand.png",
+    img: [{ img: "/images/logo/zustand.png" }],
     content:
       "- 기본적인 데이터 이동이 가능합니다.\n- 데이터 저장 옵션 기능 사용이 가능합니다.",
   },

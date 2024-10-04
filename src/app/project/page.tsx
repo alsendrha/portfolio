@@ -12,7 +12,7 @@ const Project = () => {
   const [currentProjectId, setCurrentProjectId] = useState(0);
 
   return (
-    <div className="w-full px-4">
+    <div className="w-full max-w-[1300px] px-4">
       <TitleBar title="PROJECT" />
       <div className="w-full border my-2" />
       <div className="px-10 max-[780px]:px-0 my-5 ">
