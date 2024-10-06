@@ -8,6 +8,7 @@ import { BsFillPersonVcardFill } from "react-icons/bs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaGithub } from "react-icons/fa";
+import MenuTitle from "./MenuTitle";
 const Menubar = () => {
   const pathName = usePathname();
   const menu = [
@@ -22,25 +23,18 @@ const Menubar = () => {
   ];
 
   return (
-    <div className="w-[200px] max-[1230px]:w-fit h-fit sticky top-0 max-[570px]:p-0">
-      <div className="mt-10 px-5 flex flex-col items-center max-[1230px]:px-1">
-        <Link href={"/"}>
-          <p className="font-bold text-3xl text-[#e65124] transform transition-all duration-[0.3s] ease-out max-[1230px]:hidden">
-            PORTFOLIO
-          </p>
-          <p className="font-bold text-3xl text-[#e65124] transform transition-all duration-[0.3s] ease-out hidden max-[1230px]:inline">
-            PF
-          </p>
-        </Link>
+    <div className="w-[200px] max-[1230px]:w-fit h-fit sticky top-0">
+      <div className="mt-10 px-5 flex flex-col items-center max-[1230px]:px-0">
+        <MenuTitle />
         <div className="mt-10 text-[20px]">
           {menu.map((item, index) => (
             <Link
               key={index}
               href={item.link}
               target={item.name === "GITHUB" ? "_blank" : "_self"}
-              className="max-[1230px]:flex  max-[1230px]:justify-center"
+              className="max-[1230px]:flex max-[1230px]:justify-center"
             >
-              <div className="flex relative items-center p-2 mt-2 text-[#ffa68b] rounded-[10px] group hover:bg-[#9ad9ea] hover:bg-opacity-20 max-[1230px]:w-fit max-[1230px]:rounded-full max-[1230px]:p-5 max-[1230px]:bg-white max-[1230px]:mt-5">
+              <div className="flex relative items-center p-2 text-[#ffa68b] rounded-[10px] group hover:bg-[#9ad9ea] hover:bg-opacity-20 max-[1230px]:w-fit max-[1230px]:rounded-full max-[1230px]:p-5 max-[1230px]:bg-white max-[1230px]:mt-3">
                 <div className="group-hover:scale-110 group-hover:max-[1230px]:opacity-0">
                   {item.icon}
                 </div>

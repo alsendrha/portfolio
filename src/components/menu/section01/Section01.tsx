@@ -8,15 +8,15 @@ import MyInfo from "./MyInfo";
 
 const Section01 = () => {
   return (
-    <section className="">
+    <section>
       <Title numberTitle="01" title="PROFILE" />
-      <div className="w-full flex justify-between max-[1060px]:text-center max-[1060px]:flex-col max-[1060px]:items-center mt-10 relative transition-all duration-[0.3s] ease-out">
+      <div className="w-full px-5 max-[1230px]:px-0 flex justify-between max-[1230px]:text-center max-[1230px]:flex-col max-[1230px]:items-center mt-10 relative transition-all duration-[0.3s] ease-out">
         <div>
           <MyTopContent />
           <MyImage />
           <Content />
         </div>
-        <div className="">
+        <div>
           <MyInfo />
           <MySkills />
         </div>
