@@ -16,6 +16,7 @@ const config: Config = {
       animation: {
         "spin-slow": "spin 3s linear infinite",
         "scale-up": "scale-up 0.3s ease-out",
+        "opacity-on": "opacity-on 0.3s ease-out",
       },
       keyframes: {
         "scale-up": {
@@ -24,6 +25,14 @@ const config: Config = {
           },
           "100%": {
             transform: "scale(1)",
+          },
+        },
+        "opacity-on": {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
           },
         },
       },

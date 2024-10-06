@@ -52,27 +52,29 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
   }, []);
 
   return (
-    <div className="absolute bg-white w-full z-[9999]">
+    <div className="absolute w-full z-[9999]">
       <div className="fixed inset-0 flex">
-        <div className=" w-full overflow-auto scrollbar-hide text-white transition-all duration-[0.3s] ease-out animate-scale-up">
-          <div className="w-full fixed  bg-opacity-70 h-[70px] top-0 flex justify-end px-10 items-center z-[9999]">
-            <div
-              className="w-[40px] h-[40px] flex items-center justify-center border-[#ffa68b] rounded-full border-[3px] cursor-pointer"
-              onClick={() => setIsClick(false)}
-            >
-              <IoClose className="text-[32px] text-[#ffa68b]" />
+        <div className="w-full flex justify-center overflow-auto bg-[black] bg-opacity-50 scrollbar-hide transition-all duration-[0.3s] ease-out animate-opacity-on">
+          <div className="w-[1200px] overflow-y-auto scrollbar-hide">
+            <div className="w-full mx-auto flex flex-col items-center back_color">
+              <div className="w-full sticky top-5 flex justify-end px-10 z-50">
+                <div
+                  className="w-[40px] h-[40px] flex items-center justify-center border-[#ffa68b] rounded-full border-[3px] cursor-pointer"
+                  onClick={() => setIsClick(false)}
+                >
+                  <IoClose className="text-[32px] text-[#ffa68b]" />
+                </div>
+              </div>
+              {/* <ModalTitle title={data.title} /> */}
+              <ModalImage data={data} />
+              <ModalContent data={data} />
+              <ModalSkills data={data} />
+              <ModalContribution
+                data={data}
+                isClicked={isClicked}
+                handleClicked={handleClicked}
+              />
             </div>
-          </div>
-          <div className="w-full mx-auto flex flex-col items-center back_color">
-            {/* <ModalTitle title={data.title} /> */}
-            <ModalImage data={data} />
-            <ModalContent data={data} />
-            <ModalSkills data={data} />
-            <ModalContribution
-              data={data}
-              isClicked={isClicked}
-              handleClicked={handleClicked}
-            />
           </div>
         </div>
       </div>
