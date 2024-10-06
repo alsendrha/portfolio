@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { BiSolidRightArrow } from "react-icons/bi";
 import ModalTitle from "./ModalTitle";
@@ -8,6 +8,7 @@ import ModalSubTitle from "./ModalSubTitle";
 import Image from "next/image";
 import ModalSkills from "./ModalSkills";
 import ModalContribution from "./ModalContribution";
+import { useOnclickOutside } from "@/hooks/useOnClickOutSide";
 
 type ProjectModalProps = {
   setIsClick: React.Dispatch<React.SetStateAction<boolean>>;
@@ -32,6 +33,7 @@ type ProjectModalProps = {
 };
 
 const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
+  const backRef = useRef<HTMLDivElement>(null);
   const [isClicked, setIsClicked] = useState<boolean[]>(
     Array(data.myJob.length).fill(true)
   );
@@ -51,15 +53,22 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
     };
   }, []);
 
+  useOnclickOutside(backRef, () => {
+    setIsClick(false);
+  });
+
   return (
     <div className="absolute w-full z-[9999]">
       <div className="fixed inset-0 flex">
-        <div className="w-full flex justify-center overflow-auto bg-[black] bg-opacity-50 scrollbar-hide transition-all duration-[0.3s] ease-out animate-opacity-on">
-          <div className="w-[1200px] overflow-y-auto scrollbar-hide">
+        <div className="w-full flex justify-center overflow-auto bg-[black] bg-opacity-50 backdrop-blur-[2px] scrollbar-hide animate-opacity-on">
+          <div
+            ref={backRef}
+            className="w-[1100px] my-3 overflow-y-auto rounded-lg scrollbar-hide"
+          >
             <div className="w-full mx-auto flex flex-col items-center back_color">
-              <div className="w-full sticky top-5 flex justify-end px-10 z-50">
+              <div className="w-full sticky top-3 flex justify-end px-3 z-50">
                 <div
-                  className="w-[40px] h-[40px] flex items-center justify-center border-[#ffa68b] rounded-full border-[3px] cursor-pointer"
+                  className="w-[30px] h-[30px] flex items-center justify-center border-[#ffa68b] rounded-full border-[3px] cursor-pointer"
                   onClick={() => setIsClick(false)}
                 >
                   <IoClose className="text-[32px] text-[#ffa68b]" />
