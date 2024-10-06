@@ -12,7 +12,7 @@ const ModalSubTitle = ({ iconUrl, title }: ModalSubTitleProps) => {
       <div className="w-[22px] h-[22px] relative mr-2">
         <Image src={iconUrl} fill sizes="1" alt="아이콘" />
       </div>
-      <p className="text-3xl font-bold text-[#ffa68b]">{title}</p>
+      <p className="text-3xl font-bold text-[#5D4037]">{title}</p>
     </div>
   );
 };

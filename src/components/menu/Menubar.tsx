@@ -12,7 +12,7 @@ const Menubar = () => {
   const pathName = usePathname();
   const menu = [
     { name: "ABOUT ME", icon: <IoPersonSharp />, link: "/about" },
-    { name: "SKILLS", icon: <FaBook />, link: "/skills" },
+    //{ name: "SKILLS", icon: <FaBook />, link: "/skills" },
     { name: "PROJECT", icon: <BiSolidBookContent />, link: "/project" },
     {
       name: "GITHUB",
@@ -22,15 +22,16 @@ const Menubar = () => {
   ];
 
   return (
-    <div className="w-[290px] max-[1230px]:w-fit p-1 h-fit sticky top-0 max-[570px]:p-0">
-      <div className="mt-10 px-5  max-[1230px]:px-0">
-        <div className="px-2">
-          <Link href={"/"}>
-            <p className="font-bold text-3xl text-[#e65124] transform transition-all duration-[0.3s] ease-out max-[1230px]:text-[16px]">
-              PORTFOLIO
-            </p>
-          </Link>
-        </div>
+    <div className="w-[200px] max-[1230px]:w-fit h-fit sticky top-0 max-[570px]:p-0">
+      <div className="mt-10 px-5 flex flex-col items-center max-[1230px]:px-1">
+        <Link href={"/"}>
+          <p className="font-bold text-3xl text-[#e65124] transform transition-all duration-[0.3s] ease-out max-[1230px]:hidden">
+            PORTFOLIO
+          </p>
+          <p className="font-bold text-3xl text-[#e65124] transform transition-all duration-[0.3s] ease-out hidden max-[1230px]:inline">
+            PF
+          </p>
+        </Link>
         <div className="mt-10 text-[20px]">
           {menu.map((item, index) => (
             <Link

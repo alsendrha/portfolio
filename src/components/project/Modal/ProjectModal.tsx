@@ -68,10 +68,10 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
             <div className="w-full mx-auto flex flex-col items-center back_color">
               <div className="w-full sticky top-3 flex justify-end px-3 z-50">
                 <div
-                  className="w-[30px] h-[30px] flex items-center justify-center border-[#ffa68b] rounded-full border-[3px] cursor-pointer"
+                  className="w-[25px] h-[25px] flex items-center justify-center border-[#ffa68b] rounded-full border-[3px] cursor-pointer"
                   onClick={() => setIsClick(false)}
                 >
-                  <IoClose className="text-[32px] text-[#ffa68b]" />
+                  <IoClose className="text-[24px] text-[#ffa68b]" />
                 </div>
               </div>
               {/* <ModalTitle title={data.title} /> */}

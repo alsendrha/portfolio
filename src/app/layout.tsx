@@ -25,7 +25,7 @@ export default function RootLayout({
       >
         <div className="w-full flex relative">
           <Menubar />
-          <div className="w-full flex border-l">{children}</div>
+          <div className="w-full flex border-l-[1px]">{children}</div>
         </div>
       </body>
     </html>

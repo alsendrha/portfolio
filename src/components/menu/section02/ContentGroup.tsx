@@ -1,7 +1,7 @@
+"use client";
+
 import React, { ReactNode } from "react";
 import { motion } from "framer-motion";
-import DateComponent from "./DateComponent";
-import Content from "./Content";
 import CenterLine from "./CenterLine";
 import { twMerge } from "tailwind-merge";
 
@@ -27,7 +27,7 @@ const ContentGroup = ({
     <div
       className={twMerge("relative flex max-[925px]:flex-col", [colList[col]])}
     >
-      <div className="w-[350px]">
+      <div className="w-[275px]">
         <motion.div
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -38,7 +38,7 @@ const ContentGroup = ({
         </motion.div>
       </div>
       <CenterLine lineOpen={lineOpen} />
-      <div className="w-[350px]">
+      <div className="w-[275px]">
         <motion.div
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}

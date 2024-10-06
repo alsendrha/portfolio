@@ -7,11 +7,11 @@ type TitleProps = {
 
 const Title = ({ numberTitle, title }: TitleProps) => {
   return (
-    <div className="relative flex items-end  ml-20 max-[1060px]:ml-6">
-      <h2 className="text-[150px] max-[600px]:text-[100px] opacity-25 leading-[160px] font-bold">
+    <div className="relative flex items-end">
+      <h2 className="text-[80px] opacity-25 leading-[78px] font-bold">
         {numberTitle}
       </h2>
-      <p className="absolute left-24 text-[50px] text-[#e65124] max-[600px]:text-[30px] max-[600px]:left-[65px] max-[600px]:bottom-7 font-bold">
+      <p className="absolute left-12 text-[28px] text-[#e65124] font-bold">
         {title}
       </p>
     </div>

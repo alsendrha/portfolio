@@ -24,19 +24,19 @@ const ModalContribution = ({
         {data.myJob.map((tech, index: any) => (
           <div
             key={index}
-            className="flex flex-col"
+            className="flex flex-col mb-5"
             onClick={() => handleClicked(index)}
           >
-            <div className="w-full p-3 text-xl flex items-center text-white  bg-[#e65124] rounded-xl my-2 cursor-pointer">
+            <div className="py-2 text-xl flex items-center self-start text-[#e65124] rounded-xl  cursor-pointer">
               <BiSolidRightArrow
-                className={`text-sm mr-4 transform transition-all duration-[0.3s] ease-out  ${
+                className={`text-sm mr-2 transform transition-all duration-[0.3s] ease-out  ${
                   isClicked[index] ? "rotate-90" : ""
                 }`}
               />
               {tech.name}
             </div>
             {isClicked[index] && (
-              <div className="text-black p-1">
+              <div className="text-[#2C2C2E]">
                 <p>{tech.content}</p>
               </div>
             )}

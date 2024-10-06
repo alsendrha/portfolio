@@ -1,23 +1,15 @@
 import React from "react";
-import { motion } from "framer-motion";
 import DateComponent from "./DateComponent";
 import Title from "../Title";
 import Content from "./Content";
 import ContentGroup from "./ContentGroup";
-type Section02Props = {
-  param: string;
-};
 
-const Section02 = ({ param }: Section02Props) => {
+const Section02 = () => {
   return (
-    <section
-      className={` mt-20 ${
-        param === "/" || param === "/about" ? "block" : "hidden"
-      }`}
-    >
+    <section className="mt-20">
       <Title numberTitle="02" title="STORY" />
-      <div className="relative flex flex-col items-center mt-10 mx-20 max-[1060px]:mx-0 max-[600px]:mt-0">
-        <div className="absolute opacity-0 max-[925px]:opacity-100 w-[5px] top-[20px] bottom-[230px] flex-grow bg-black max-[925px]:bg-[#ffa68b]" />
+      <div className="relative flex flex-col items-center mt-10 max-[1060px]:mx-0 max-[600px]:mt-0">
+        <div className="absolute opacity-0 max-[925px]:opacity-100 w-[5px] top-[20px] bottom-[210px] flex-grow bg-[#2C2C2E] max-[925px]:bg-[#ffa68b]" />
         <ContentGroup
           col="rev"
           children1={
@@ -93,7 +85,8 @@ const Section02 = ({ param }: Section02Props) => {
               title="동성인재개발교육원"
               content="Java 스마트융함 풀스택개발"
               content2="풀스택 교육 과정 수료"
-              content3="HTML+CSS, Javascript, Vue.js Spring boot"
+              content3="HTML+CSS, Javascript, Vue.js"
+              content4="Spring boot"
             />
           }
         />
@@ -120,7 +113,8 @@ const Section02 = ({ param }: Section02Props) => {
               title="동보공항서비스(현 JAS)"
               content="이스타항공 여객 운송"
               content2="제주팀 주임(여객지상직)"
-              content3="이스타항공 자회사 설립으로 인한 고용승계"
+              content3="이스타항공 자회사 설립으로 인한"
+              content4="고용승계"
             />
           }
         />
