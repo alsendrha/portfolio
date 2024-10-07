@@ -29,7 +29,7 @@ const Project = () => {
                 data.title === "3-ENG"
                   ? "max-[1350px]:flex-col-reverse"
                   : "max-[1350px]:flex-col"
-              } max-[1350px]:w-auto`}
+              } max-[1350px]:w-full`}
             >
               {data.title === "3-ENG" ? (
                 <ProjectContentText
