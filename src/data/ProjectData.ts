@@ -3,13 +3,50 @@ export const projectData = [
     id: 0,
     img: [
       "/images/project/project01-image01.png",
-      "/images/project/project01-image02.png",
       "/images/project/project01-image03.png",
       "/images/project/project01-image04.png",
       "/images/project/project01-image05.png",
+      "/images/project/project01-image02.png",
       "/images/project/project01-image06.png",
       "/images/project/project01-image07.png",
       "/images/project/project01-image08.png",
+    ],
+    imgReview: [
+      {
+        title: "메인페이지",
+        content:
+          "처음 화면은 메인페이지에서 시작하며 전반적인 페이지를 볼 수 있습니다.\n상단에는 슬라이더 기능이 있는 이미지가 있습니다. 메뉴바 최상단에는 마이페이지 로그인이 있고 기본 메뉴엔 경매와 커뮤니티가 있습니다. \n스크롤을 내리면 상단 앱바의 크기가 줄어들며 반응형으로 동작합니다. 마이페이지를 눌렀을때 로그인이 되어있지 않다면 alert창이 뜨고 로그인 페이지로 이동합니다.\n경매를 누르면 경매 물품 페이지로 이동하고 경매 물품 리스트들을 볼 수 있습니다. 커뮤니티는 일반적인 게시판 형식으로 만들었습니다.",
+      },
+      {
+        title: "로그인",
+        content:
+          "아이디와 비밀번호를 입력하고 로그인 버튼을 누르면 메인 페이지로 이동합니다. 소셜 로그인은 미구현이고 일반 로그인만 가능합니다. 회원가입 외에는 미구현 입니다.",
+      },
+      {
+        title: "회원가입",
+        content:
+          "회원가입은 아이디, 비밀번호, 이름, 이메일, 전화번호를 입력하고 회원가입 버튼을 누르면 회원가입이 완료됩니다.\n이메일 확인은 입력한 이메일로 인증코드를 발송하고 코드가 발송되면 인증코드 입력창이 나타납니다. 인증 코드를 입력해야 회원가입을 할 수 있습니다. 회원가입이 완료되면 로그인 페이지로 이동합니다.",
+      },
+      {
+        title: "물품 등록",
+        content:
+          "물품등록에서는 사진은 총 3장까지 등록 가능하며 카테고리 제목, 초기 경매가격을 적어 등록을 합니다. 일반적인 등록폼입니다.\n등록된 상품은 관리자가 있다는 전제하에 관리자가 물품을 검수하고 최종 승인을 내줄때까지 대기상태가 됩니다. 자신의 물품 상태는 마이페이지에서 확인이 가능합니다.",
+      },
+      {
+        title: "디테일 페이지",
+        content:
+          "이 홈페이지의 <strong style='color:#e65124;'>핵심</strong>인 디테일 페이지 입니다.\n채팅이 실시간으로 이루어지며 가격별로 입찰가가 정해져있어 해당 금액에 입찰을 누르면 정해진 입찰 금액으로 입찰이 됩니다. 가격도 실시간으로 늘어나며 최종 입찰시 모달창이 뜨며 입찰자는 결제 페이지로, 미입찰자는 다른 추천 상품 페이지로 이동 가능한 모달창이 뜹니다.\n 채팅은 웹소켓을 이용하여 구현하였습니다.",
+      },
+      {
+        title: "마이 페이지",
+        content:
+          "마이페이지에선 자신의 물품 상태와 회원정보 수정, 주소 등록이 가능합니다.\n<strong style='color:#e65124;'>Order</strong> : 입찰된 물품과 결제예정인 물품들을 볼수있습니다.\n<strong style='color:#e65124;'>WishList</strong> : 찜한 물품들을 볼수있습니다(미구현)\n<strong style='color:#e65124;'>Address</strong> : 회원가입 메뉴에 없었던 주소를 등록하고 수정이 가능힙니다. 총 3개까지 등록이 가능하며 등록된 주소 클릭시 메인 주소로 선택이 가능합니다.\n<strong style='color:#e65124;'>Password</strong> : 비밀번호 변경을 할 수 있습니다.(미구현)\n<strong style='color:#e65124;'>프로필 관리</strong> : 자신의 프로필 이미지, 닉네임, 자기소개 변경이 가능합니다.\n <strong style='color:#e65124;'>Logout</strong> : 로컬스토리지에 저장되어있는 토큰을 삭제하여 로그아웃이 됩니다.",
+      },
+      {
+        title: "커뮤니티",
+        content:
+          "백엔드에서 게시판 미구현으로 <strong style='color:#e65124;'>파이어베이스</strong>를 활용하여 커뮤니티 게시판을 구현하였습니다. 사진은 파이어베이스 스토리지를 사용하였고 다른 내용들은 파이어베이스 데이터베이스를 사용하였습니다. 일반적인 게시판으로 게시물 작성과 댓글을 작성할 수 있습니다. 게시물과 댓글 모두 수정과 삭제가 가능합니다.",
+      },
     ],
     title: "우리동네 경매장",
     content: "명품 경매 서비스",
@@ -18,6 +55,7 @@ export const projectData = [
     github: "https://github.com/OZ-Coding-School/oz_01_main-002-FE",
     date: "2024-05-01 ~ 2024-05-31",
     people: "frontend 2명, backend 3명",
+    backend: "Aws, Django, Mysql, Firebase",
     myJob: [
       {
         name: "프로젝트 셋팅",
@@ -79,10 +117,61 @@ export const projectData = [
     id: 1,
     img: [
       "/images/project/3eng-01.png",
+      "/images/project/3eng-07.png",
+      "/images/project/3eng-06.png",
+      "/images/project/3eng-08.png",
+      "/images/project/3eng-09.png",
       "/images/project/3eng-02.png",
-      "/images/project/3eng-03.png",
       "/images/project/3eng-04.png",
+      "/images/project/3eng-03.png",
       "/images/project/3eng-05.png",
+    ],
+    imgReview: [
+      {
+        title: "시작 페이지",
+        content:
+          "시작페이지 입니다\n시작하기 버튼을 누르면 로그인과 회원가입 스와이프 할수있는 페이지로 이동하게 됩니다. <strong style='color:#e65124;'>vanilla extract css</strong>를 사용하여 동적으로 움직이는 화면을 만들었습니다.",
+      },
+      {
+        title: "로그인",
+        content:
+          "아이디와 비밀번호를 입력하고 로그인 버튼을 누르면 메인 페이지로 이동합니다. 소셜 로그인은 없으며 옆 회원가입 버튼을 누르면 회원가입 폼으로 스와이프됩니다.",
+      },
+      {
+        title: "회원가입",
+        content:
+          "회원가입은 간단하게 이메일, 닉네임, 비밀번호를 입력하고 회원가입 버튼을 누르면 회원가입이 됩니다. 이메일은 정규식을 통해 이메일 형식이 아니면 회원가입이 되지 않습니다. 회원가입이 완료되면 로그인 페이지로 스와이프합니다.",
+      },
+      {
+        title: "난이도 선택 페이지",
+        content:
+          "초등학생, 중학생, 고등학생, 일반인으로 나누어져 있으며 해당 난이도를 선택하면 다음 페이지로 이동합니다. 반응형으로 제작하였으며 화면이 줄어들면 한줄(가로) 스크롤이 가능하게 만들었습니다.\n그리고 상단 앱바가 아닌 왼쪽 사이드로 앱바를 제작해보았습니다. 앱바를 통해 다른 페이지들로 이동 가능합니다.",
+      },
+      {
+        title: "날짜 선택 페이지",
+        content:
+          "날짜 선택 페이지에서는 오늘 날짜밖에 선택이 안됩니다. 난이도별로 하루 총 5회 선택 가능하며 문제풀이가 완료된 날짜는 다른 색깔로 표시가 됩니다.",
+      },
+      {
+        title: "퀴즈 페이지",
+        content:
+          "<strong style='color:#e65124;'>Open AI</strong>를 통해 총 5문제를 받아오고 문제를 풀 수 있는 페이지 입니다. 문제를 풀고 정답버튼을 누르게되면 다시 <strong style='color:#e65124;'>open AI</strong>에게 요청하여 정답을 받아오게 됩니다. 정답을 받아오면 다음 페이지로 넘어가며 해당 풀이를 확인할 수 있습니다.",
+      },
+      {
+        title: "점수확인 페이지",
+        content:
+          "해당 페이지는 Open AI에게 답을 받아와 표시해주고 5문제의 평균점수를 계산하여 표시해줍니다. 점수 카드를 클릭하면 회전하며 뒷면에 정답 풀이가 표시됩니다.",
+      },
+      {
+        title: "나의 학습공간 페이지",
+        content:
+          "이제까지 풀었던 문제들을 표시해주며 내가 푼 문제를 클릭하면 날짜별로 풀었던 문제들을 다시 풀어볼 수 있습니다. 3번 틀리면 정답이 나타나며 평균 점수와 풀었던 문제들의 수를 표시해줍니다. 반응형으로 화면을 줄였을시 카드형태로 변하며 회전하며 양쪽에 해당 메뉴들이 나타납니다.",
+      },
+      {
+        title: "나의 정보 페이지",
+        content:
+          "회원 정보가 나타나는 페이지입니다.\n프로필 이미지, 닉네임, 비밀번호 변경이 가능하며 회원탈퇴 버튼을 누르면 회원탈퇴가 가능합니다. 회원탈퇴시 로컬스토리지에 저장된 토큰을 삭제하고 로그인 페이지로 이동합니다.",
+      },
     ],
     title: "3-ENG",
     content: "매일 AI 5문제 영어",
@@ -91,6 +180,7 @@ export const projectData = [
     github: "https://github.com/OZ-Coding-School/oz_01_collabo-003",
     date: "2024-04-01 ~ 2024-04-30",
     people: "frontend 2명, backend 2명",
+    backend: "Aws, Django, Mysql",
     myJob: [
       {
         name: "프로젝트 셋팅",
@@ -153,8 +243,49 @@ export const projectData = [
     id: 2,
     img: [
       "/images/project/min-01.png",
+      "/images/project/min-07.png",
       "/images/project/min-02.png",
       "/images/project/min-03.png",
+      "/images/project/min-04.png",
+      "/images/project/min-05.png",
+      "/images/project/min-06.png",
+    ],
+    imgReview: [
+      {
+        title: "메인페이지",
+        content:
+          "처음 시작 페이지입니다. 리액트를 배우고 처음 만들어본 당근마켓(웹 중고거래) 클론 페이지 입니다.\n 상단에는 검색창과 카테고리가 있으며 중고거래 상품들이 나열되어 있습니다.\n검색 input에 검색어를 입력하면 상품 검색이 가능하며 상품을 클릭하면 디테일 페이지로 이동하여 상품의 상세정보를 볼 수 있습니다.\n 글쓰기 버튼도 fixed로 항상 활성화 되어있으며 클릭시 로그인이 되어있지 않으면 로그인 페이지로 이동하게 됩니다.",
+      },
+      {
+        title: "로그인",
+        content:
+          "아이디와 비밀번호를 입력하고 로그인 버튼을 누르면 메인 페이지로 이동합니다. 소셜 로그인은 미구현이고 일반 로그인만 가능합니다. 아이디가 없으면 회원가입을 통해 회원가입이 가능합니다.",
+      },
+      {
+        title: "회원가입",
+        content:
+          "<strong style='color:#e65124;'>Firebase</strong>를 활용하여 만들었으며 회원가입은 이메일, 비밀번호, 닉네임을 입력, 회원가입 버튼을 누르면 회원가입이 완료됩니다.\n이메일은 회원가입 버튼을 누르면 자동으로 중복확인을 해주며 닉네임은 닉네임 확인 버튼을 통해 중복확인이 가능합니다. 회원가입이 완료되면 로그인 페이지로 이동합니다.",
+      },
+      {
+        title: "물품 등록",
+        content:
+          "물품 등록은 사진 및 제목, 내용을 입력하며 나눔인지 판매인지 선택하여 금액을 설정합니다. 만약 나눔을 선택하면 0원이 입력되며 input창은 자동으로 비활성화됩니다. 그리고 당근마켓 특성을 살려 어디서 거래를 할 것인지 지도를 클릭할수 있으며 지도는 구글맵을 사용했고 주소는 <strong style='color:#e65124;'>kakao geo geocoder api</strong>를 사용하여 주소로 변환하였습니다.",
+      },
+      {
+        title: "디테일 페이지",
+        content:
+          "상품의 정보를 확인 할 수 있고 어디서 거래를 할 것인지 지도를 통해 확인이 가능합니다. 유저 정보쪽에 <strong style='color:#e65124;'>채팅</strong>이 가능한 버튼도 있어서 누르면 1:1 채팅이 가능합니다. 게시자는 채팅을 요청한 상대를 클릭하여 채팅 페이지로 이동할 수 있습니다.",
+      },
+      {
+        title: "마이 페이지",
+        content:
+          "마이페이지에서는 자신이 올린 게시물 수를 확인 가능하며 숫자를 클릭하면 게시물 리스트로 이동하게 됩니다.\n<strong style='color:#e65124;'>나의 정보</strong> : 프로필 정보 확인 및 수정이 가능합니다.\n <strong style='color:#e65124;'>홈페이지 정보</strong> : 홈페이지 생성일 및 완성일자, 버전 확인이 가능합니다.",
+      },
+      {
+        title: "회원정보",
+        content:
+          "회원정보를 확인 및 수정할 수 있습니다. 처음엔 수정하기 버튼만 있고 클릭하면 사진과 같이 변경됩니다. 현재는 닉네임만 변경이 가능합니다.",
+      },
     ],
     title: "배추마켓",
     content: "당근마켓 클론",
@@ -163,6 +294,7 @@ export const projectData = [
     github: "https://github.com/alsendrha/firebaseCRUD",
     date: "2024-03-01 ~ 2024-03-25",
     people: "frontend 1명",
+    backend: "Firebase",
     myJob: [
       {
         name: "전체 페이지 개발",

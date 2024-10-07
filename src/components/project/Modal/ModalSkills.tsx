@@ -2,32 +2,37 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import ModalSubTitle from "./ModalSubTitle";
 import { useOnclickOutside } from "@/hooks/useOnClickOutSide";
+import { twMerge } from "tailwind-merge";
+import { backColorList } from "@/types/types";
 
 type ModalSkillsProps = {
   data: {
     techImg: string[];
   };
+  bgType: "auction" | "quiz" | "market" | "default";
 };
 
-const ModalSkills = ({ data }: ModalSkillsProps) => {
+const ModalSkills = ({ data, bgType }: ModalSkillsProps) => {
   return (
     <div className="my-5 w-[1000px] max-[1020px]:w-[800px] max-[810px]:w-[600px] max-[610px]:w-[450px]">
-      <ModalSubTitle iconUrl="/images/option.svg" title="SKILLS" />
-      <div className=" flex max-[810px]:flex-wrap w-full rounded-xl p-2">
-        {data.techImg.map((tech, index) => (
-          <div
-            key={index}
-            className="w-[80px] h-[80px] mr-3 relative overflow-hidden"
-          >
-            <Image
-              src={tech}
-              fill
-              sizes="1"
-              className="object-contain"
-              alt="스킬 이미지"
-            />
-          </div>
-        ))}
+      <div className={twMerge("p-2 rounded-xl", backColorList[bgType])}>
+        <ModalSubTitle iconUrl="/images/option.svg" title="SKILLS" />
+        <div className=" flex max-[810px]:flex-wrap w-full rounded-xl">
+          {data.techImg.map((tech, index) => (
+            <div
+              key={index}
+              className="w-[80px] h-[80px] mr-3 relative overflow-hidden"
+            >
+              <Image
+                src={tech}
+                fill
+                sizes="1"
+                className="object-contain"
+                alt="스킬 이미지"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

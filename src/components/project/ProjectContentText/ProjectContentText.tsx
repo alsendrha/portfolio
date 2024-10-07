@@ -9,6 +9,7 @@ type ProjectContentTextProps = {
     id: number;
     people: string;
     tech: string[];
+    backend: string;
     myJob: {
       name: string;
     }[];
@@ -43,6 +44,10 @@ const ProjectContentText = ({
         <div className="flex mt-2">
           <SubTitleText title="사용 기술" />
           <p>{data.tech}</p>
+        </div>
+        <div className="flex mt-2">
+          <SubTitleText title="백엔드&nbsp;&nbsp;&nbsp;&nbsp;" />
+          <p>{data.backend}</p>
         </div>
         <div className="flex mt-2">
           <SubTitleText title="담당 업무" />

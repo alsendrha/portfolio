@@ -16,6 +16,19 @@ const ProjectItem = ({
   setIsClick,
   children,
 }: ProjectItemProps) => {
+  const projectName = () => {
+    switch (data.title) {
+      case "3-ENG":
+        return "quiz";
+      case "우리동네 경매장":
+        return "auction";
+      case "배추마켓":
+        return "market";
+      default:
+        return "default";
+    }
+  };
+
   return (
     <div className="mb-[200px]">
       <div
@@ -24,7 +37,12 @@ const ProjectItem = ({
       >
         {children}
         {isClick && currentProjectId === data.id && (
-          <ProjectModal key={data.id} setIsClick={setIsClick} data={data} />
+          <ProjectModal
+            key={data.id}
+            setIsClick={setIsClick}
+            data={data}
+            bgType={projectName()}
+          />
         )}
       </div>
     </div>

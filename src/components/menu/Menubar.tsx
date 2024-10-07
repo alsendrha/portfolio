@@ -12,7 +12,7 @@ import MenuTitle from "./MenuTitle";
 const Menubar = () => {
   const pathName = usePathname();
   const menu = [
-    { name: "ABOUT ME", icon: <IoPersonSharp />, link: "/about" },
+    { name: "ABOUT", icon: <IoPersonSharp />, link: "/about" },
     //{ name: "SKILLS", icon: <FaBook />, link: "/skills" },
     { name: "PROJECT", icon: <BiSolidBookContent />, link: "/project" },
     {
