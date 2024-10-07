@@ -59,8 +59,9 @@ const ProjectContentText = ({
             ))}
           </div>
         </div>
-        <div className="flex flex-wrap mt-2 max-[550px]:text-[14px]">
+        <div className="flex mt-2 max-[550px]:text-[14px]">
           <SubTitleText title="백엔드&nbsp;&nbsp;&nbsp;&nbsp;" />
+          <div className="flex flex-wrap">
           {data.backend.map((item, index) => (
             <div
               key={index}
@@ -72,6 +73,7 @@ const ProjectContentText = ({
               <Content content={item} />
             </div>
           ))}
+             </div>
         </div>
         <div className="flex mt-2 max-[550px]:text-[14px]">
           <SubTitleText title="담당 업무" />
