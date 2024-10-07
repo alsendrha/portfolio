@@ -17,7 +17,7 @@ type ModalReviewProps = {
 
 const ModalReview = ({ data, bgType }: ModalReviewProps) => {
   return (
-    <div className="w-[1000px] max-[1020px]:w-[800px] max-[810px]:w-[600px] max-[610px]:w-[450px] mt-5">
+    <div className="mt-10 w-[1000px] max-[1020px]:w-[800px] max-[810px]:w-[600px] max-[610px]:w-[450px] ">
       <div className={twMerge("p-2 rounded-xl", backColorList[bgType])}>
         <ModalSubTitle iconUrl="/images/review.svg" title="REVIEW" />
         <ReviewItem

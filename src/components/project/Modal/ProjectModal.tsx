@@ -53,7 +53,10 @@ const ProjectModal = ({ setIsClick, data, bgType }: ProjectModalProps) => {
             )}
           >
             <div className="w-full mx-auto flex flex-col items-center">
-              <ModalCloseButton onClick={() => setIsClick(false)} />
+              <ModalCloseButton
+                bgType={bgType}
+                onClick={() => setIsClick(false)}
+              />
               <ModalImage data={data} bgType={bgType} />
               <ModalContent data={data} bgType={bgType} />
               <ModalReview data={data} bgType={bgType} />

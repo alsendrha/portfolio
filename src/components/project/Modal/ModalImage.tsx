@@ -7,22 +7,23 @@ import { twMerge } from "tailwind-merge";
 type ModalImageProps = {
   data: {
     img: string[];
+    link: string;
   };
   bgType: "auction" | "quiz" | "market" | "default";
 };
 
 const ModalImage = ({ data, bgType }: ModalImageProps) => {
   const [images, setImages] = useState(0);
-  const next = () => {
-    setImages((prev) => (prev + 1 >= data.img.length ? 0 : prev + 1));
-  };
+  // const next = () => {
+  //   setImages((prev) => (prev + 1 >= data.img.length ? 0 : prev + 1));
+  // };
 
-  const prev = () => {
-    setImages((prev) => (prev - 1 < 0 ? data.img.length - 1 : prev - 1));
-  };
+  // const prev = () => {
+  //   setImages((prev) => (prev - 1 < 0 ? data.img.length - 1 : prev - 1));
+  // };
 
   return (
-    <div className="w-full flex  flex-col items-center p-4">
+    <div className="w-full flex  flex-col items-center px-4">
       <div className={twMerge("p-1 rounded-xl", backColorList[bgType])}>
         <div className="w-[990px] h-[600px] max-[1020px]:w-[790px] max-[1020px]:h-[500px] max-[810px]:w-[590px] max-[810px]:h-[400px] max-[610px]:w-[440px] max-[610px]:h-[350px] rounded-xl overflow-hidden relative transform transition-all duration-[0.3s] ease-out">
           {/* <div className="flex z-10 absolute bottom-3 left-1/2 transform -translate-x-1/2">
@@ -49,12 +50,19 @@ const ModalImage = ({ data, bgType }: ModalImageProps) => {
           >
             <MdKeyboardArrowRight className="text-[20px] text-[#5D4037]" />
           </button> */}
-          <Image
-            src={data.img[images]}
-            fill
-            sizes="100vw"
-            alt="프로젝트 이미지"
-          />
+          {!data.link ? (
+            <Image
+              src={data.img[images]}
+              fill
+              sizes="100vw"
+              alt="프로젝트 이미지"
+            />
+          ) : (
+            <iframe
+              className="w-full h-full"
+              src={`https://www.youtube.com/embed/${data.link}?controls=0&autoplay=1&mute=1`}
+            />
+          )}
         </div>
       </div>
     </div>

@@ -101,7 +101,7 @@ export const projectData = [
       "Zustand, ",
       "Firebase",
     ],
-    link: "https://drive.google.com/file/d/1azeC7Qnhg94tMq4DeLzpTDfV1dkNwF1u/view?usp=drive_link",
+    link: "zO9jtUQCDSw",
     link2: "https://superlative-boba-26e889.netlify.app/",
     techImg: [
       "/images/logo/nextjs.png",
@@ -229,7 +229,7 @@ export const projectData = [
       "Vanilla-extract/css, ",
       "Zustand",
     ],
-    link: "https://drive.google.com/file/d/1iB3WScb1EYIq1zvhURsamtRVxevvaB8e/view",
+    link: "n2IU83g5n78",
     link2: "https://3eng.site/",
     techImg: [
       "/images/logo/react_vite.png",
@@ -316,7 +316,7 @@ export const projectData = [
       },
     ],
     tech: ["React, ", "Google-map-api, ", "Kakao-web-api, ", "Firebase"],
-    link: "https://alsendrha.shop/",
+    link: "",
     link2: "https://alsendrha.shop/",
     techImg: [
       "/images/logo/react.png",

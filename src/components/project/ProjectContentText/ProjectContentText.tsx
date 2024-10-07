@@ -57,12 +57,12 @@ const ProjectContentText = ({
             ))}
           </p>
         </div>
-        <div className="flex mt-2">
+        {/* <div className="flex mt-2">
           <SubTitleText title="구현 영상" />
           <Link href={data.link} target="_blank">
             <Content content={data.title} textColor="link" />
           </Link>
-        </div>
+        </div> */}
         <div className="flex mt-2">
           <SubTitleText title="홈페이지 " />
           <Link href={data.link2} target="_blank">
