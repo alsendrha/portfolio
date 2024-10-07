@@ -60,7 +60,7 @@ const ModalImage = ({ data, bgType }: ModalImageProps) => {
           ) : (
             <iframe
               className="w-full h-full"
-              src={`https://www.youtube.com/embed/${data.link}?controls=0&autoplay=1&mute=1`}
+              src={`https://www.youtube.com/embed/${data.link}?controls=1&autoplay=1&mute=1`}
             />
           )}
         </div>
