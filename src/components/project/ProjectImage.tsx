@@ -15,7 +15,7 @@ const ProjectImage = ({ data }: ProjectImageProps) => {
         src={data.img[0]}
         fill
         sizes="100vw"
-        className="object-contain rounded-xl"
+        className="object-fill rounded-xl"
         alt="프로젝트 이미지"
         priority
         quality={75}

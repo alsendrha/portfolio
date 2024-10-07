@@ -22,10 +22,6 @@ body {
   font-family: "Pretendard", sans-serif;
   /* background: radial-gradient(circle, #fff, #f0f0f0); */
   background: #e0dcce;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none
 }
 
 .back_color {

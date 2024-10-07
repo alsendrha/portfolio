@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
       // className={inter.className}
       >
-        <div className="w-full flex relative">
+        <div className="w-full flex relative max-[550px]:flex-col">
           <Menubar />
           <div className="w-full flex border-l-[1px]">{children}</div>
         </div>
