@@ -63,7 +63,7 @@ const ProjectModal = ({ setIsClick, data }: ProjectModalProps) => {
         <div className="w-full flex justify-center overflow-auto bg-[black] bg-opacity-50 backdrop-blur-[2px] scrollbar-hide animate-opacity-on">
           <div
             ref={backRef}
-            className="w-[1100px] my-3 overflow-y-auto rounded-lg scrollbar-hide"
+            className="w-[1100px] m-3 overflow-y-auto rounded-lg scrollbar-hide"
           >
             <div className="w-full mx-auto flex flex-col items-center back_color">
               <div className="w-full sticky top-3 flex justify-end px-3 z-50">

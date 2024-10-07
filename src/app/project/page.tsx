@@ -24,24 +24,32 @@ const Project = () => {
             setIsClick={setIsClick}
             key={data.id}
           >
-            {data.title === "3-ENG" ? (
-              <ProjectContentText
-                data={data}
-                setCurrentProjectId={setCurrentProjectId}
-                setIsClick={setIsClick}
-              />
-            ) : (
-              <ProjectImage projectData={projectData} data={data} />
-            )}
-            {data.title === "3-ENG" ? (
-              <ProjectImage projectData={projectData} data={data} />
-            ) : (
-              <ProjectContentText
-                data={data}
-                setCurrentProjectId={setCurrentProjectId}
-                setIsClick={setIsClick}
-              />
-            )}
+            <div
+              className={`w-full justify-between flex ${
+                data.title === "3-ENG"
+                  ? "max-[1350px]:flex-col-reverse"
+                  : "max-[1350px]:flex-col"
+              } max-[1350px]:w-auto`}
+            >
+              {data.title === "3-ENG" ? (
+                <ProjectContentText
+                  data={data}
+                  setCurrentProjectId={setCurrentProjectId}
+                  setIsClick={setIsClick}
+                />
+              ) : (
+                <ProjectImage data={data} />
+              )}
+              {data.title === "3-ENG" ? (
+                <ProjectImage data={data} />
+              ) : (
+                <ProjectContentText
+                  data={data}
+                  setCurrentProjectId={setCurrentProjectId}
+                  setIsClick={setIsClick}
+                />
+              )}
+            </div>
           </ProjectItem>
         ))}
       </div>

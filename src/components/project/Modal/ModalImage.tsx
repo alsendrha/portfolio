@@ -43,7 +43,12 @@ const ModalImage = ({ data }: ModalImageProps) => {
         >
           <MdKeyboardArrowRight className="text-[20px] text-[#5D4037]" />
         </button>
-        <Image src={data.img[images]} fill sizes="1" alt="프로젝트 이미지" />
+        <Image
+          src={data.img[images]}
+          fill
+          sizes="100vw"
+          alt="프로젝트 이미지"
+        />
       </div>
     </div>
   );

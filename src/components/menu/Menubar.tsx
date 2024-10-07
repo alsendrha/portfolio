@@ -24,7 +24,7 @@ const Menubar = () => {
 
   return (
     <div className="w-[200px] max-[1230px]:w-fit h-fit sticky top-0">
-      <div className="mt-10 px-5 flex flex-col items-center max-[1230px]:px-0">
+      <div className="mt-10 px-5 flex flex-col items-center max-[1230px]:px-2">
         <MenuTitle />
         <div className="mt-10 text-[20px]">
           {menu.map((item, index) => (
