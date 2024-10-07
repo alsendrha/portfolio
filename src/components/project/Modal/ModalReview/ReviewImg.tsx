@@ -11,7 +11,7 @@ const ReviewImg = ({ src }: ReviewImgProps) => {
       <Image
         src={src}
         fill
-        sizes="100vw"
+        sizes="1"
         className="object-fill rounded-xl"
         alt="리뷰이미지"
       />

@@ -8,7 +8,7 @@ const MyImage = () => {
         <Image
           src={"/images/my_photo.jpg"}
           fill
-          sizes="100vw"
+          sizes="1"
           alt="프로필 이미지"
           className="object-cover"
           quality={75}

@@ -55,7 +55,7 @@ export const projectData = [
     github: "https://github.com/OZ-Coding-School/oz_01_main-002-FE",
     date: "2024-05-01 ~ 2024-05-31",
     people: "frontend 2명, backend 3명",
-    backend: "Aws, Django, Mysql, Firebase",
+    backend: ["Aws", "Django", "Mysql", "Firebase"],
     myJob: [
       {
         name: "프로젝트 셋팅",
@@ -93,12 +93,12 @@ export const projectData = [
       },
     ],
     tech: [
-      "NextJs, ",
-      "Typescript, ",
-      "Tailwindcss, ",
-      "Axios, ",
-      "React-query, ",
-      "Zustand, ",
+      "NextJs",
+      "Typescript",
+      "Tailwindcss",
+      "Axios",
+      "React-query",
+      "Zustand",
       "Firebase",
     ],
     link: "zO9jtUQCDSw",
@@ -180,7 +180,7 @@ export const projectData = [
     github: "https://github.com/OZ-Coding-School/oz_01_collabo-003",
     date: "2024-04-01 ~ 2024-04-30",
     people: "frontend 2명, backend 2명",
-    backend: "Aws, Django, Mysql",
+    backend: ["Aws", "Django", "Mysql"],
     myJob: [
       {
         name: "프로젝트 셋팅",
@@ -223,10 +223,10 @@ export const projectData = [
       },
     ],
     tech: [
-      "React vite, ",
-      "Typescript, ",
-      "Axios, ",
-      "Vanilla-extract/css, ",
+      "React vite",
+      "Typescript",
+      "Axios",
+      "Vanilla-extract/css",
       "Zustand",
     ],
     link: "n2IU83g5n78",
@@ -294,7 +294,7 @@ export const projectData = [
     github: "https://github.com/alsendrha/firebaseCRUD",
     date: "2024-03-01 ~ 2024-03-25",
     people: "frontend 1명",
-    backend: "Firebase",
+    backend: ["Firebase"],
     myJob: [
       {
         name: "전체 페이지 개발",
@@ -315,7 +315,7 @@ export const projectData = [
         content: "모든 페이지를 담당하여 기여도 100% 입니다.",
       },
     ],
-    tech: ["React, ", "Google-map-api, ", "Kakao-web-api, ", "Firebase"],
+    tech: ["React", "Google-map-api", "Kakao-web-api", "Firebase"],
     link: "",
     link2: "https://alsendrha.shop/",
     techImg: [

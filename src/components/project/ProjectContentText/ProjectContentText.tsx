@@ -3,13 +3,15 @@ import React from "react";
 import SubTitleText from "./SubTitleText";
 import Content from "./Content";
 import MoreButton from "../MoreButton";
+import { twMerge } from "tailwind-merge";
+import { backColor } from "@/service/skillColor";
 
 type ProjectContentTextProps = {
   data: {
     id: number;
     people: string;
     tech: string[];
-    backend: string;
+    backend: string[];
     myJob: {
       name: string;
     }[];
@@ -43,17 +45,39 @@ const ProjectContentText = ({
         </div>
         <div className="flex mt-2">
           <SubTitleText title="사용 기술" />
-          <p>{data.tech}</p>
+          <div className="flex flex-wrap">
+            {data.tech.map((item, index) => (
+              <div
+                key={index}
+                className={twMerge(
+                  "border rounded-full text-white text-[14px] px-2 mr-1 mb-1",
+                  [backColor(item)]
+                )}
+              >
+                <Content content={item} />
+              </div>
+            ))}
+          </div>
         </div>
         <div className="flex mt-2">
           <SubTitleText title="백엔드&nbsp;&nbsp;&nbsp;&nbsp;" />
-          <p>{data.backend}</p>
+          {data.backend.map((item, index) => (
+            <div
+              key={index}
+              className={twMerge(
+                "border rounded-full text-white text-[14px] px-2 mr-1 mb-1",
+                [backColor(item)]
+              )}
+            >
+              <Content content={item} />
+            </div>
+          ))}
         </div>
         <div className="flex mt-2">
           <SubTitleText title="담당 업무" />
           <p>
-            {data.myJob.map((tech, index) => (
-              <span key={index}>{tech.name},&nbsp;</span>
+            {data.myJob.map((item, index) => (
+              <span key={index}>{item.name},&nbsp;</span>
             ))}
           </p>
         </div>

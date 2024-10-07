@@ -54,7 +54,7 @@ const ModalImage = ({ data, bgType }: ModalImageProps) => {
             <Image
               src={data.img[images]}
               fill
-              sizes="100vw"
+              sizes="1"
               alt="프로젝트 이미지"
             />
           ) : (
