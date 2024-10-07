@@ -2,9 +2,7 @@
 
 import React from "react";
 import { IoPersonSharp } from "react-icons/io5";
-import { FaBook } from "react-icons/fa";
 import { BiSolidBookContent } from "react-icons/bi";
-import { BsFillPersonVcardFill } from "react-icons/bs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaGithub } from "react-icons/fa";

@@ -1,7 +1,6 @@
 import Image from "next/image";
-import React, { useRef } from "react";
+import React from "react";
 import ModalSubTitle from "./ModalSubTitle";
-import { useOnclickOutside } from "@/hooks/useOnClickOutSide";
 import { twMerge } from "tailwind-merge";
 import { backColorList } from "@/types/types";
 
