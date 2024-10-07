@@ -14,7 +14,7 @@ type ModalContentProps = {
 
 const ModalContent = ({ data, bgType }: ModalContentProps) => {
   return (
-    <div className=" mt-10 w-[1000px] flex items-start max-[1020px]:w-[800px] max-[810px]:w-[600px] max-[610px]:w-[450px] text-black text-lg">
+    <div className=" mt-10 w-[1000px] flex items-start max-[1020px]:w-[800px] max-[810px]:w-[600px] max-[610px]:w-[450px] max-[550px]:w-full text-black text-lg">
       <div className={twMerge("flex p-2 rounded-xl", backColorList[bgType])}>
         <p>{data.detail}</p>
         <div className="flex flex-col justify-start items-center">

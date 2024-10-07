@@ -22,7 +22,7 @@ const ModalContribution = ({
   bgType,
 }: ModalContributionProps) => {
   return (
-    <div className="w-[1000px] max-[1020px]:w-[800px] max-[810px]:w-[600px] max-[610px]:w-[450px]">
+    <div className="w-[1000px] max-[1020px]:w-[800px] max-[810px]:w-[600px] max-[610px]:w-[450px] max-[550px]:w-full">
       <div className={twMerge("p-2 rounded-xl", backColorList[bgType])}>
         <ModalSubTitle iconUrl="/images/people.svg" title="나의 기여도" />
         <div className="w-full rounded-xl">

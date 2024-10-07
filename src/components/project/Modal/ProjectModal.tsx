@@ -44,15 +44,15 @@ const ProjectModal = ({ setIsClick, data, bgType }: ProjectModalProps) => {
   return (
     <div className="absolute w-full z-[9999]">
       <div className="fixed inset-0 flex">
-        <div className="w-full  flex justify-center overflow-auto bg-[black] bg-opacity-50 backdrop-blur-[2px] scrollbar-hide animate-opacity-on">
+        <div className="w-full flex justify-center overflow-auto bg-[black] bg-opacity-50 backdrop-blur-[2px] scrollbar-hide animate-opacity-on">
           <div
             ref={backRef}
             className={twMerge(
-              "w-[1100px] m-3 pb-5 overflow-y-auto rounded-lg scrollbar-hide",
+              "w-[1100px] m-3 pb-5 max-[550px]:p-3 overflow-y-auto rounded-lg scrollbar-hide",
               backgroundList[bgType]
             )}
           >
-            <div className="w-full mx-auto flex flex-col items-center">
+            <div className="w-full flex flex-col items-center">
               <ModalCloseButton
                 bgType={bgType}
                 onClick={() => setIsClick(false)}

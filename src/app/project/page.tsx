@@ -25,7 +25,7 @@ const Project = () => {
             key={data.id}
           >
             <div
-              className={`w-full justify-between flex ${
+              className={`w-full justify-between items-center flex transform transition-all duration-[0.3s] ease-out ${
                 data.title === "3-ENG"
                   ? "max-[1350px]:flex-col-reverse"
                   : "max-[1350px]:flex-col"

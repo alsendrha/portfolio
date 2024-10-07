@@ -39,11 +39,11 @@ const ProjectContentText = ({
         />
       </div>
       <div>
-        <div className="flex mt-1">
+        <div className="flex mt-1 max-[550px]:text-[14px]">
           <SubTitleText title="개발 인원" />
           <Content content={data.people} />
         </div>
-        <div className="flex mt-2">
+        <div className="flex mt-2 max-[550px]:text-[14px]">
           <SubTitleText title="사용 기술" />
           <div className="flex flex-wrap">
             {data.tech.map((item, index) => (
@@ -59,7 +59,7 @@ const ProjectContentText = ({
             ))}
           </div>
         </div>
-        <div className="flex mt-2">
+        <div className="flex mt-2 max-[550px]:text-[14px]">
           <SubTitleText title="백엔드&nbsp;&nbsp;&nbsp;&nbsp;" />
           {data.backend.map((item, index) => (
             <div
@@ -73,7 +73,7 @@ const ProjectContentText = ({
             </div>
           ))}
         </div>
-        <div className="flex mt-2">
+        <div className="flex mt-2 max-[550px]:text-[14px]">
           <SubTitleText title="담당 업무" />
           <p>
             {data.myJob.map((item, index) => (
@@ -87,7 +87,7 @@ const ProjectContentText = ({
             <Content content={data.title} textColor="link" />
           </Link>
         </div> */}
-        <div className="flex mt-2">
+        <div className="flex mt-2 max-[550px]:text-[14px]">
           <SubTitleText title="홈페이지 " />
           <Link href={data.link2} target="_blank">
             <Content

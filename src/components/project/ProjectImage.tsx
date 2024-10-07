@@ -10,7 +10,7 @@ type ProjectImageProps = {
 
 const ProjectImage = ({ data }: ProjectImageProps) => {
   return (
-    <div className="w-[600px] h-[350px] max-[860px]:w-[450px] max-[600px]:w-[350px] max-[600px]:h-[250px]  max-[860px]:h-[300px]  overflow-hidden relative rounded-xl">
+    <div className="w-[600px] h-[350px] max-[860px]:w-[450px] max-[600px]:w-[350px] max-[550px]:w-[300px] max-[600px]:h-[250px] max-[860px]:h-[300px]  overflow-hidden relative rounded-xl">
       <Image
         src={data.img[0]}
         fill
