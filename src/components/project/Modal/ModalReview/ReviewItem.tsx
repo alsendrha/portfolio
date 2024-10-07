@@ -20,7 +20,7 @@ const ReviewItem = ({
 }: ReviewItemProps) => {
   const marginTop = {
     first: "mt-5",
-    all: "mt-28",
+    all: "mt-28 max-[550px]mt-10",
   };
 
   return (
