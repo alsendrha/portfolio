@@ -29,7 +29,7 @@ const ProjectContentText = ({
   setIsClick,
 }: ProjectContentTextProps) => {
   return (
-    <div className="px-3 ml-10 max-[1350px]:px-0 max-[550px]:px-14 w-full max-[600px]:w-[350px] max-[550px]:w-full max-[1350px]:mt-10">
+    <div className="px-3 ml-10 max-[1350px]:px-0 max-[550px]:px-2 w-full max-[600px]:w-[350px] max-[550px]:w-full max-[1350px]:mt-10">
       <div className="flex items-center mb-10">
         <p className="text-2xl font-bold text-[#5D4037]">{data.title}</p>
         <MoreButton
