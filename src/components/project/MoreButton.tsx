@@ -30,7 +30,7 @@ const MoreButton = ({
         //   setIsClick(true);
         // }}
       >
-        <p>더보기</p>
+        <p className="text-nowrap">더보기</p>
       </div>
     </Link>
   );
