@@ -9,7 +9,7 @@ type TitleContainerProps = {
 
 const TitleContainer = ({ project }: TitleContainerProps) => {
   return (
-    <div className="max-[1050px]:absolute bottom-3 right-5">
+    <div className="max-[1050px]:absolute bottom-3 right-5 z-10">
       <p
         className={twMerge(
           "text-[24px] text-nowrap max-[1050px]:text-[16px]",
