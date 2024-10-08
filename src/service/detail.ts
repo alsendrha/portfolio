@@ -8,6 +8,8 @@ export const projectName = (project: Project) => {
       return "auction";
     case "배추마켓":
       return "market";
+    case "Korea Tour":
+      return "tour";
     default:
       return "default";
   }

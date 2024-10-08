@@ -36,6 +36,7 @@ export const backColorList2 = {
   auction: "bg-[#222]",
   quiz: "bg-[#7982E8]",
   market: "bg-[#81cc85]",
+  tour: "bg-[#E07039]",
   default: "bg-[#e0dcce]",
 };
 
@@ -43,6 +44,7 @@ export const textColorList2 = {
   auction: "text-[#D1B383]",
   quiz: "text-white max-[1050px]:text-gray-400",
   market: "text-white max-[1050px]:text-gray-400",
+  tour: "text-white max-[1050px]:text-gray-400",
   default: "text-white max-[1050px]:text-gray-400",
 };
 

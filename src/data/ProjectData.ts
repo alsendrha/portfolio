@@ -2,6 +2,114 @@ export const projectData = [
   {
     id: 0,
     img: [
+      "/images/project/appImg/koreaTour01.png",
+      "/images/project/appImg/koreaTour02.png",
+      "/images/project/appImg/koreaTour03.png",
+      "/images/project/appImg/koreaTour04.png",
+      "/images/project/appImg/koreaTour06.png",
+      "/images/project/appImg/koreaTour09.png",
+      "/images/project/appImg/koreaTour08.png",
+      "/images/project/appImg/koreaTour10.png",
+      "/images/project/appImg/koreaTour11.png",
+    ],
+    imgReview: [
+      {
+        title: "프로젝트 소개",
+        content:
+          "React-native로 만든 앱입니다.\n기존 React 및 Nextjs로 프로젝트를 만들다가 앱개발도 같이 병행해보자고 생각하여 만들어보게 되었습니다. 이앱을 만들면서 기존 React만 할때보다 실력이 더 향상되었고 코드 정리도 더 깔끔하게 정리할 수 있었습니다.\n이앱은 <strong style='color:#e65124;'>공공데이터포털의 한국관광공사_국문 관광정보 서비스_GW</strong>  데이터를 활용하여 개발하였습니다. 리뷰 기능은 firebase를 활용하여 개발하였고 혼자 처음 만들어 보는 앱으로 앞으로 더 성장하는 보습을 보여드리겠습니다. 현재 이앱말고 사이트 프로젝트로 냉장고 재료를 활용하여 레시피를 작성해주는 앱을 개발하고있습니다. ",
+      },
+      {
+        title: "메인 페이지",
+        content:
+          "앱을 시작하면 바로 볼수있는 화면입니다. 원래는 키워드 찾기로 이루어진 공공데이터지만 버튼형식으로 바꿔 만들었습니다. 하단 리스트는 FlatList를 사용했고 3개까지 보여주고 마지막 더보기는 FlatList의 ListFooterComponent를 적용하여 만들었습니다. 기본 하단 바텀 앱바는 여행 리스트를 볼수있는 페이지와 나의 정보를 볼수있는 마이페이지 두가지로 나누어져 있습니다.",
+      },
+      {
+        title: "리스트 페이지",
+        content:
+          "더보기 및 View All을 누르면 볼수있는 페이지 입니다. <strong style='color:#e65124;'>FlatList</strong>과 <strong style='color:#e65124;'>react query</strong>를 사용하여 데이터를 받아오고  <strong style='color:#e65124;'>무한 스크롤</strong> 구현을 하였습니다. 페이지당 10개의 데이터를 불러오고 하단에 도달했을때 다음 데이터를 불러오는 형식입니다.\n상단 햄버거 아이콘 클릭시 바텀시트로 초반 메인화면에서 보았던 상단 메뉴바가 등장합니다. 클릭으로 검색 카테고리를 변경 가능합니다. 그리고 상단 검색 input에 검색어를 입력하여 검색도 가능합니다.",
+      },
+      {
+        title: "디테일 페이지",
+        content:
+          "디테일 페이지에서는 공공데이터의 디테일 정보와 디테일 이미지를 혼합하여 사용하였다보니 데이터들의 사진이 개수도 다르고 사진이 없는 데이터도 있습니다. 만약 디테일 이미지가 없는 데이터는 기본 데이터의 사진을 사용하게 만들었습니다.\n상단은 사진이있고 하단은 내용과 홈페이지 등록이 되어있으면 홈페이지 이동이 가능하게 클릭 이벤트를 구현하였고 하단에 위도와 경도를 이용한 지도를 구현하였습니다.\n지도는 <strong style='color:#e65124;'>Google Map</strong>을 이용하였고 커스텀 마커를 적용해보았습니다.",
+      },
+      {
+        title: "리뷰 작성",
+        content:
+          "디테일 페이지 하단엔 바텀시트가 항상 활성화되어있는데 손가락으로 스와이프하면 크게 펼쳐집니다. 리뷰를 작성하고 어떤 리뷰들이 작성되있는지 확인할 수 있습니다. 리뷰는 게시물당 하나씩만 작성 가능하며 해당 리뷰를 수정하려면 마이페이지에서 수정 및 삭제가 가능합니다.",
+      },
+      {
+        title: "마이 페이지",
+        content:
+          "마이페이지는 유저 정보와 작성 리뷰를 확인 할 수 있습니다.\n<strong style='color:#e65124;'>나의정보</strong> : 유저의 정보를 확인 수정이 가능하며 회원탈되도 여기서 가능합니다. 변경은 닉네임과 비밀번호 변경이 가능합니다.\n<strong style='color:#e65124;'>공지사항</strong> : 공지사항은 마이페이지에 메뉴가 별로 없어서 메뉴만 넣어봤습니다. 미구현입니다.\n<strong style='color:#e65124;'>내 후기글</strong> : 내가 작성한 리뷰를 확인하고 수정 삭제할 수 있습니다.\n<strong style='color:#e65124;'>앱정보</strong> : 앱의 정보가 있는 페이지입니다.(버전)",
+      },
+      {
+        title: "회원가입 & 로그인",
+        content:
+          "firebase를 이용하여 회원가입과 로그인이 가능합니다. 회원가입은 원래 이메일과 비밀번호만 입력하면 되지만 추가적으로 닉네임을 입력하게 만들었습니다. 입력한 닉네임 정보는 데이터베이스에 따로 저장되어 리뷰 작성시 불러오게 됩니다. 이메일과 닉네임 중복확인도 구현해봤습니다.\n로그인은 이메일과 비밀번호로 가능하며 비밀번호 분실시 firebase에서 제공하는 이메일 변경링크가 등록한 이메일로 발송됩니다. 발송된 링크를 클릭하여 비밀번호 재등록이 가능합니다.",
+      },
+    ],
+    title: "Korea Tour",
+    content: "우리나라 여행지 및 맛집 추천 서비스",
+    detail:
+      "클릭 한번을 통해 우리나라 여행지 및 맛집을 찾아갈 수 있는 관광앱입니다. 관광지, 맛집, 여행지, 행사등 다양한 정보들을 검색 가능합니다. 또한 리뷰를 남겨 다른 이용자에게 도움이 될 수 있게 합니다.",
+    github: "https://github.com/alsendrha/RN_KoreaTourApp",
+    date: "2024-05-01 ~ 2024-05-31",
+    people: "frontend 1명",
+    backend: ["Firebase"],
+    myJob: [
+      {
+        name: "프로젝트 셋팅",
+        content:
+          "리액트 네이티브를 이용하여 개발하였고 기본적으로 많이 사용하는 라이브러리 설치와 셋팅을 하였습니다.",
+      },
+      {
+        name: "전체 페이지 개발",
+        content:
+          "메인 페이지부터 리스트 페이지, 디테일 페이지, 마이페이지, 로그인, 회원가입, 리뷰 등록 페이지, 수정페이지를 개발하였습니다. ",
+      },
+      {
+        name: "공공데이터를 황용한 개발",
+        content:
+          "공공데이터포털의 한국관광공사_국문 관광정보 서비스_GW 데이터를 활용하여 개발하였습니다. 이중 여러 주소를 이용하였지만 메인으로는 키워드 검색을 제일 많이 활용하였습니다.",
+      },
+      {
+        name: "firebase를 활용한 리뷰 구현",
+        content:
+          "공공데이터만 사용해서 끝내려고 하였지만 너무 간단하기도하고 리뷰 기능도 있으면 좋을것 같아서 리뷰 기능을 만들었습니다. 로그인 사용자만 이용 가능하며 별점과 리뷰 내용을 남길 수 있습니다.",
+      },
+      {
+        name: "배포",
+        content:
+          "개발 환경이 윈도우라 ios쪽 개발은 확인 못하였습니다. 몇몇 라이브러리는 따로 설정을 해줘야하지만 xcode가 설치되있지않아 설정을 못하였고 android쪽으로 개발하였습니다. 그리고 개발자 계정에 문제가 생겨 앱 출시는 못하였습니다.",
+      },
+      {
+        name: "(전체 기여도 100%)",
+        content: "모든 페이지를 담당하여 기여도 100% 입니다.",
+      },
+    ],
+    tech: [
+      "react native",
+      "Typescript",
+      "Axios",
+      "React-query",
+      "Zustand",
+      "Firebase",
+    ],
+    link: "3qlaWW-n1XU",
+    link2: "",
+    techImg: [
+      "/images/logo/react-native.png",
+      "/images/logo/typescript.png",
+      "/images/logo/axios.png",
+      "/images/logo/react-query.png",
+      "/images/logo/zustand.png",
+      "/images/logo/firebase.png",
+    ],
+  },
+  {
+    id: 1,
+    img: [
       "/images/project/project01-image01.png",
       "/images/project/project01-image03.png",
       "/images/project/project01-image04.png",
@@ -114,7 +222,7 @@ export const projectData = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     img: [
       "/images/project/3eng-01.png",
       "/images/project/3eng-07.png",
@@ -240,7 +348,7 @@ export const projectData = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     img: [
       "/images/project/min-01.png",
       "/images/project/min-07.png",

@@ -2,9 +2,11 @@ import React from "react";
 import ReviewImg from "./ReviewImg";
 import ReviewContent from "./ReviewContent";
 import { twMerge } from "tailwind-merge";
+import ProjectAppImg from "@/components/detail/ProjectReview/ProjectAppImg";
 
 type ReviewItemProps = {
   src: string;
+  dataTitle: string;
   title: string;
   content: string;
   mt?: "first" | "all";
@@ -13,6 +15,7 @@ type ReviewItemProps = {
 
 const ReviewItem = ({
   align = false,
+  dataTitle,
   src,
   title,
   content,
@@ -22,7 +25,7 @@ const ReviewItem = ({
     first: "mt-5",
     all: "mt-28 max-[550px]mt-10",
   };
-
+  console.log(dataTitle);
   return (
     <div
       className={twMerge(
@@ -33,14 +36,42 @@ const ReviewItem = ({
       )}
     >
       {!align ? (
-        <ReviewImg src={src} />
+        <>
+          {dataTitle === "Korea Tour" ? (
+            <ProjectAppImg align={align} src={src} />
+          ) : (
+            <ReviewImg src={src} />
+          )}
+        </>
       ) : (
-        <ReviewContent title={title} content={content} />
+        <div
+          className={twMerge(
+            "",
+            dataTitle === "Korea Tour" && "ml-[50px]  max-[1500px]:ml-0"
+          )}
+        >
+          <ReviewContent title={title} content={content} />
+        </div>
       )}
       {!align ? (
-        <ReviewContent title={title} content={content} />
+        <div
+          className={twMerge(
+            "",
+            dataTitle === "Korea Tour" &&
+              src !== "/images/project/appImg/koreaTour01.png" &&
+              "mr-[50px]  max-[1500px]:mr-0"
+          )}
+        >
+          <ReviewContent title={title} content={content} />
+        </div>
       ) : (
-        <ReviewImg src={src} />
+        <>
+          {dataTitle === "Korea Tour" ? (
+            <ProjectAppImg align={align} src={src} />
+          ) : (
+            <ReviewImg src={src} />
+          )}
+        </>
       )}
     </div>
   );

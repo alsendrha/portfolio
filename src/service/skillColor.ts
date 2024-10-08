@@ -2,6 +2,8 @@ export const backColor = (item: string) => {
   switch (item) {
     case "React":
       return "bg-[#61DAFB]";
+    case "react native":
+      return "bg-[#00a4d1]";
     case "NextJs":
       return "bg-black";
     case "Typescript":
