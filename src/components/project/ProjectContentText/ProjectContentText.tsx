@@ -29,7 +29,7 @@ const ProjectContentText = ({
   setIsClick,
 }: ProjectContentTextProps) => {
   return (
-    <div className="px-3 ml-10 max-[1350px]:px-0 max-[550px]:px-0 w-full max-[600px]:w-[350px] max-[550px]:w-full max-[1350px]:mt-10">
+    <div className="px-3 ml-10 max-[1350px]:px-0 max-[550px]:pr-3 w-full max-[600px]:w-[350px] max-[550px]:w-full max-[1350px]:mt-10">
       <div className="flex items-center mb-10">
         <p className="text-2xl text-nowrap font-bold text-[#5D4037]">
           {data.title}
