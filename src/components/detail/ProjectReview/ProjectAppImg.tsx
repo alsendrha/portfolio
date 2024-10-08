@@ -13,7 +13,7 @@ const ProjectAppImg = ({ src, align }: ProjectAppImgProps) => {
       {src !== "/images/project/appImg/koreaTour01.png" ? (
         <div
           className={twMerge(
-            "h-[666px] relative shrink-0 w-[730px] max-[1500px]:w-[550px] max-[1500px]:h-[500px]  max-[700px]:w-full max-[700px]:h-[350px] mb-5  max-[600px]:mb-0 transform transition-all duration-[0.3s] ease-out",
+            "h-[666px] relative shrink-0 w-[730px] max-[1500px]:w-[550px] max-[1500px]:h-[500px]  max-[700px]:w-full max-[700px]:h-[350px]  max-[500px]:h-[250px] mb-5  max-[600px]:mb-0 transform transition-all duration-[0.3s] ease-out",
             [
               align
                 ? "mr-[50px] max-[1500px]:mr-0"
