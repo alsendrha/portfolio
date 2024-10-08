@@ -12,7 +12,7 @@ const Project = () => {
   const [currentProjectId, setCurrentProjectId] = useState(0);
 
   return (
-    <div className="w-full max-w-[1300px] px-4">
+    <div className="w-full max-w-[1600px] px-4">
       <TitleBar title="PROJECT" />
       <div className="w-full border my-2" />
       <div className="px-10 max-[780px]:px-0 my-5 ">
@@ -25,7 +25,7 @@ const Project = () => {
             key={data.id}
           >
             <div
-              className={`w-full justify-between items-center flex transform transition-all duration-[0.3s] ease-out ${
+              className={`w-full justify-between items-start max-[1350px]:items-center flex transform transition-all duration-[0.3s] ease-out ${
                 data.title === "3-ENG"
                   ? "max-[1350px]:flex-col-reverse"
                   : "max-[1350px]:flex-col"

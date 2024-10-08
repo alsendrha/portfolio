@@ -33,7 +33,7 @@ const ProjectItem = ({
     <div className="mb-[200px]">
       <div
         className={`flex max-[1350px]:flex-col
-         max-[1350px]:items-center justify-between bg-white bg-opacity-65 px-8 max-[640px]:px-2 py-[100px] max-[640px]:py-[20px] rounded-xl`}
+         max-[1350px]:items-center justify-between bg-white bg-opacity-65 px-8 max-[640px]:px-2 py-[70px] max-[640px]:py-[20px] rounded-xl`}
       >
         {children}
         {isClick && currentProjectId === data.id && (

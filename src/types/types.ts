@@ -31,3 +31,41 @@ export const backColorList = {
   market: "bg-white bg-opacity-75",
   default: "bg-[#e0dcce]",
 };
+
+export const backColorList2 = {
+  auction: "bg-[#222]",
+  quiz: "bg-[#7982E8]",
+  market: "bg-[#81cc85]",
+  default: "bg-[#e0dcce]",
+};
+
+export const textColorList2 = {
+  auction: "text-[#D1B383]",
+  quiz: "text-white max-[1050px]:text-gray-400",
+  market: "text-white max-[1050px]:text-gray-400",
+  default: "text-white max-[1050px]:text-gray-400",
+};
+
+export type Project = {
+  id: number;
+  img: string[];
+  imgReview: {
+    title: string;
+    content: string;
+  }[];
+  title: string;
+  content: string;
+  detail: string;
+  github: string;
+  date: string;
+  people: string;
+  backend: string[];
+  myJob: {
+    name: string;
+    content: string;
+  }[];
+  tech: string[];
+  link: string;
+  link2: string;
+  techImg: string[];
+};

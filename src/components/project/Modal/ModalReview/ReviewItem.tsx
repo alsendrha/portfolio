@@ -27,8 +27,8 @@ const ReviewItem = ({
     <div
       className={twMerge(
         `flex ${
-          align ? "max-[1020px]:flex-col-reverse" : "max-[1020px]:flex-col"
-        } max-[1020px]:items-center max-[1020px]:px-5`,
+          align ? "max-[1500px]:flex-col-reverse" : "max-[1500px]:flex-col"
+        } max-[1500px]:items-center max-[1500px]:px-5`,
         marginTop[mt]
       )}
     >

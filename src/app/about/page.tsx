@@ -2,7 +2,7 @@ import Section01 from "@/components/menu/section01/Section01";
 import Section02 from "@/components/menu/section02/Section02";
 const Main = () => {
   return (
-    <div className="w-full p-5">
+    <div className="w-full max-w-[1600px] p-5">
       <Section01 />
       <Section02 />
       {/* <Link href={"/skills"} className={`flex justify-center`}>

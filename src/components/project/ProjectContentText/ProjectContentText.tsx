@@ -29,8 +29,8 @@ const ProjectContentText = ({
   setIsClick,
 }: ProjectContentTextProps) => {
   return (
-    <div className="px-3 max-[1350px]:px-0 max-[550px]:px-5 w-[400px] max-[600px]:w-[350px] max-[550px]:w-full max-[1350px]:mt-10">
-      <div className="flex mb-10">
+    <div className="px-3 ml-10 max-[1350px]:px-0 max-[550px]:px-14 w-full max-[600px]:w-[350px] max-[550px]:w-full max-[1350px]:mt-10">
+      <div className="flex items-center mb-10">
         <p className="text-2xl font-bold text-[#5D4037]">{data.title}</p>
         <MoreButton
           setCurrentProjectId={setCurrentProjectId}
@@ -62,18 +62,18 @@ const ProjectContentText = ({
         <div className="flex mt-2 max-[550px]:text-[14px]">
           <SubTitleText title="백엔드&nbsp;&nbsp;&nbsp;&nbsp;" />
           <div className="flex flex-wrap">
-          {data.backend.map((item, index) => (
-            <div
-              key={index}
-              className={twMerge(
-                "border rounded-full text-white text-[14px] px-2 mr-1 mb-1",
-                [backColor(item)]
-              )}
-            >
-              <Content content={item} />
-            </div>
-          ))}
-             </div>
+            {data.backend.map((item, index) => (
+              <div
+                key={index}
+                className={twMerge(
+                  "border rounded-full text-white text-[14px] px-2 mr-1 mb-1",
+                  [backColor(item)]
+                )}
+              >
+                <Content content={item} />
+              </div>
+            ))}
+          </div>
         </div>
         <div className="flex mt-2 max-[550px]:text-[14px]">
           <SubTitleText title="담당 업무" />

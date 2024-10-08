@@ -10,7 +10,7 @@ const Content = () => {
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="font-bold text-[#2C2C2E]"
+        className="font-bold text-[#2C2C2E] text-[18px] max-[1230px]:text-[16px]"
       >
         <p>
           저는 비전공자이며 코로나로 인해 항공 서비스업에서 개발자로 도전하게

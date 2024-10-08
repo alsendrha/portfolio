@@ -1,13 +1,12 @@
 import { backColorList } from "@/types/types";
 import Image from "next/image";
 import React, { useState } from "react";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import { twMerge } from "tailwind-merge";
 
 type ModalImageProps = {
   data: {
-    img: string[];
-    link: string;
+    img: string[] | undefined;
+    link: string | undefined;
   };
   bgType: "auction" | "quiz" | "market" | "default";
 };
@@ -57,7 +56,7 @@ const ModalImage = ({ data, bgType }: ModalImageProps) => {
           </button> */}
           {!data.link ? (
             <Image
-              src={data.img[images]}
+              src={data.img![images]}
               fill
               sizes="1"
               alt="프로젝트 이미지"

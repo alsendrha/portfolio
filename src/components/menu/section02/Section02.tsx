@@ -6,7 +6,7 @@ import ContentGroup from "./ContentGroup";
 
 const Section02 = () => {
   return (
-    <section className="mt-20">
+    <section className="mt-48  max-[1230px]:mt-20">
       <Title numberTitle="02" title="STORY" />
       <div className="relative flex flex-col items-center mt-10 max-[1060px]:mx-0 max-[600px]:mt-0">
         <div className="absolute opacity-0 max-[925px]:opacity-100 w-[5px] top-[20px] bottom-[210px] flex-grow bg-[#2C2C2E] max-[925px]:bg-[#ffa68b]" />
