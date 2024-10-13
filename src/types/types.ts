@@ -56,6 +56,7 @@ export type Project = {
     content: string;
   }[];
   title: string;
+  retrospect: string;
   content: string;
   detail: string;
   github: string;
