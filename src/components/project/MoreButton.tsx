@@ -16,6 +16,7 @@ const MoreButton = ({
 }: MoreButtonProps) => {
   return (
     <Link
+      className="flex w-fit"
       href={{
         pathname: "/detail",
         query: {
@@ -24,13 +25,13 @@ const MoreButton = ({
       }}
     >
       <div
-        className=" ml-2 border border-[#e65124] rounded-2xl bg-[#e65124] hover:bg-white text-white max-[860px]:text-[12px] hover:text-[#e65124] px-2 flex items-center cursor-pointer"
+        className="mt-5 border border-[#e65124] p-3 rounded-2xl bg-[#e65124] hover:bg-white text-white max-[860px]:text-[12px] hover:text-[#e65124] flex items-center cursor-pointer"
         // onClick={() => {
         //   setCurrentProjectId(data.id);
         //   setIsClick(true);
         // }}
       >
-        <p className="text-nowrap">더보기</p>
+        <p className="text-nowrap">자세히 보기</p>
       </div>
     </Link>
   );

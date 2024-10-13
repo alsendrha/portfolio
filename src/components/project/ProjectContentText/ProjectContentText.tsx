@@ -34,11 +34,6 @@ const ProjectContentText = ({
         <p className="text-2xl text-nowrap font-bold text-[#5D4037]">
           {data.title}
         </p>
-        <MoreButton
-          setCurrentProjectId={setCurrentProjectId}
-          setIsClick={setIsClick}
-          data={data}
-        />
       </div>
       <div>
         <div className="flex mt-1 max-[550px]:text-[14px]">
@@ -105,6 +100,11 @@ const ProjectContentText = ({
             />
           </Link>
         </div>
+        <MoreButton
+          setCurrentProjectId={setCurrentProjectId}
+          setIsClick={setIsClick}
+          data={data}
+        />
       </div>
     </div>
   );
