@@ -12,12 +12,12 @@ type ContentProps = {
 const ProjectContent = ({ project }: ContentProps) => {
   return (
     <div
-      className={twMerge("p-5 flex items-start bg-opacity-70 rounded-2xl", [
+      className={twMerge("p-5 flex items-start rounded-2xl", [
         backColorList2[projectName(project)],
       ])}
     >
       <p
-        className="text-white text-[18px]"
+        className="text-[rgba(255,255,255,0.8)] text-[20px] leading-9"
         dangerouslySetInnerHTML={{
           __html: project.retrospect.replace(/\n/g, "<br />"),
         }}
