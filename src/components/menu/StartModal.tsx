@@ -7,7 +7,7 @@ const StartModal = () => {
   useEffect(() => {
     const startBack = setTimeout(() => {
       setIsClose(true);
-    }, 4000);
+    }, 4500);
     return () => {
       clearTimeout(startBack);
     };
@@ -16,7 +16,7 @@ const StartModal = () => {
   return (
     <motion.div
       whileInView={{ opacity: 0 }}
-      transition={{ duration: 1, delay: 3 }}
+      transition={{ duration: 1, delay: 3.5 }}
       className={`w-full h-full left-0 top-0  backdrop-blur-sm bg-black bg-opacity-80 z-[1000] items-center absolute ${
         isClose ? "hidden" : "block"
       }`}
@@ -26,13 +26,13 @@ const StartModal = () => {
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
             className="w-[500px] h-[20px] bg-white"
           />
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1, delay: 1.5 }}
             className="text-white text-[64px]"
           >
             PORTFOLIO
@@ -40,7 +40,7 @@ const StartModal = () => {
           <motion.div
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
             className="w-[500px] h-[20px] bg-white"
           />
         </div>
